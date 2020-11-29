@@ -4,14 +4,16 @@ using ExamText.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamText.Migrations
 {
     [DbContext(typeof(ExamTextDbContext))]
-    partial class ExamTextDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201127101738_installup")]
+    partial class installup
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1528,9 +1530,6 @@ namespace ExamText.Migrations
 
                     b.Property<string>("ExamPassword")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<byte>("State")
-                        .HasColumnType("tinyint");
 
                     b.HasKey("Id");
 

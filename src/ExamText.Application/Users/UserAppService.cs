@@ -92,7 +92,6 @@ namespace ExamText.Users
 
             return await GetAsync(input);
         }
-
         public override async Task DeleteAsync(EntityDto<long> input)
         {
             var user = await _userManager.GetUserByIdAsync(input.Id);
@@ -102,6 +101,7 @@ namespace ExamText.Users
         public async Task<ListResultDto<RoleDto>> GetRoles()
         {
             var roles = await _roleRepository.GetAllListAsync();
+         
             return new ListResultDto<RoleDto>(ObjectMapper.Map<List<RoleDto>>(roles));
         }
 
