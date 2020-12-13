@@ -3,10 +3,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ExamSystem"
+        xmlns:emgucv="clr-namespace:Emgu.CV.UI;assembly=Emgu.CV.Platform.NetFramework"
+        xmlns:local="clr-namespace:ExamSystem" 
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid RenderTransformOrigin="0.502,0.493">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <wfi:WindowsFormsHost Width="300" Height="200" Grid.ColumnSpan="3" Margin="83,131,510.6,89" >
+            <emgucv:ImageBox Width="300" Height="200" x:Name="imagebox1"></emgucv:ImageBox>
+        </wfi:WindowsFormsHost>
+        <Button Content="打开摄像头" HorizontalAlignment="Left" Margin="542,247,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.435,1.284" Height="25" Click="Button_Click" Grid.Column="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="542,159,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="2" Name="textbook"/>
+        <Viewbox Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="100" Margin="495,-280,0,0" VerticalAlignment="Top" Width="100"/>
+        <Viewbox HorizontalAlignment="Left" Height="100" Margin="-195,469,0,-149" VerticalAlignment="Top" Width="100"/>
+        <Button Grid.ColumnSpan="3" Content="关闭摄像头" HorizontalAlignment="Left" Margin="542,291,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="Button_Click_1"/>
+
     </Grid>
+
+
 </Window>
