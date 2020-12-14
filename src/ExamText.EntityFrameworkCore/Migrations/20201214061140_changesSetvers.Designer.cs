@@ -4,14 +4,16 @@ using ExamText.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamText.Migrations
 {
     [DbContext(typeof(ExamTextDbContext))]
-    partial class ExamTextDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201214061140_changesSetvers")]
+    partial class changesSetvers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1532,13 +1534,6 @@ namespace ExamText.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(20)")
                         .HasMaxLength(20);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PicturePath")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte>("State")
                         .HasColumnType("tinyint");

@@ -28,9 +28,12 @@ namespace ExamSystem
     {
         private VideoCapture videoCapture = null;
         private Mat frame = null;
+        private CascadeClassifier classfier;
+        
         public MainWindow()
         {
             InitializeComponent();
+            classfier = new CascadeClassifier();
             imagebox1.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
         }
 

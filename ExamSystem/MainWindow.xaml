@@ -9,20 +9,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid RenderTransformOrigin="0.502,0.493">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="251*"/>
+            <RowDefinition Height="164*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="399*"/>
+            <ColumnDefinition Width="394*"/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <wfi:WindowsFormsHost Width="300" Height="200" Grid.ColumnSpan="3" Margin="83,131,510.6,89" >
+        <wfi:WindowsFormsHost Margin="10,33.2,65.2,30" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" >
             <emgucv:ImageBox Width="300" Height="200" x:Name="imagebox1"></emgucv:ImageBox>
         </wfi:WindowsFormsHost>
-        <Button Content="打开摄像头" HorizontalAlignment="Left" Margin="542,247,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.435,1.284" Height="25" Click="Button_Click" Grid.Column="2"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="542,159,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="2" Name="textbook"/>
-        <Viewbox Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="100" Margin="495,-280,0,0" VerticalAlignment="Top" Width="100"/>
-        <Viewbox HorizontalAlignment="Left" Height="100" Margin="-195,469,0,-149" VerticalAlignment="Top" Width="100"/>
-        <Button Grid.ColumnSpan="3" Content="关闭摄像头" HorizontalAlignment="Left" Margin="542,291,0,0" VerticalAlignment="Top" Width="120" Height="26" Click="Button_Click_1"/>
+        <Button Content="打开摄像头" HorizontalAlignment="Left" Margin="146.8,102.2,0,0" Width="120" Click="Button_Click" Grid.Column="3" Grid.Row="1" Height="25" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="146.8,33.2,0,0" TextWrapping="Wrap" Text="TextBox" Width="120" Grid.Column="3" Name="textbook" Grid.Row="1" Height="21" VerticalAlignment="Top"/>
+        <Button Content="关闭摄像头" HorizontalAlignment="Left" Margin="146.8,166.2,0,0" Width="120" Click="Button_Click_1" Grid.Column="3" Grid.Row="1" Height="26" VerticalAlignment="Top"/>
 
     </Grid>
 
