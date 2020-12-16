@@ -8,6 +8,10 @@
 
         public const string Pages_Roles = "Pages.Roles";
 
-        public const string Pages_Examinees = "Pages_Examinees";
+        public const string Pages_Examinees = "Pages.Examinees";
+
+        public const string Pages_ExamCompletions = "Pages.ExamCompletions";
+
+        public const string Pages_ExamQuestions = "Pages.ExamQuestions";
     }
 }

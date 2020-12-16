@@ -1,12 +1,15 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Domain.Repositories;
+using ExamText.Authorization;
 using ExamText.ExamQuestions.Dto;
 using System;
 using System.Threading.Tasks;
 
 namespace ExamText.ExamQuestions
 {
+    [AbpAuthorize(PermissionNames.Pages_ExamQuestions)]
     public class ExamQuestionAppService : AsyncCrudAppService<ExamQuestion,ExamQuestionDto, int, PagedExamQuestionsResultRequestDto, ExamQuestionDto, ExamQuestionDto> ,IExamQuestionAppService
     {
         private readonly IRepository<ExamQuestion> _examquestionRepository;
