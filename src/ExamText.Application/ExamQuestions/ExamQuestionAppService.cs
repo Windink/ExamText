@@ -1,38 +1,31 @@
 ﻿using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Domain.Repositories;
 using ExamText.ExamQuestions.Dto;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ExamText.ExamQuestions
 {
-    public class ExamQuestionAppService : IExamQuestionAppService
+    public class ExamQuestionAppService : AsyncCrudAppService<ExamQuestion,ExamQuestionDto, int, PagedExamQuestionsResultRequestDto, ExamQuestionDto, ExamQuestionDto> ,IExamQuestionAppService
     {
-        public Task<ExamQustionDto> CreateAsync(ExamQustionDto input)
+        private readonly IRepository<ExamQuestion> _examquestionRepository;
+
+        public ExamQuestionAppService(IRepository<ExamQuestion> examquestionRepository): base(examquestionRepository)
         {
-            throw new NotImplementedException();
+            _examquestionRepository = examquestionRepository;
+
         }
 
-        public Task DeleteAsync(EntityDto<int> input)
-        {
-            throw new NotImplementedException();
-        }
+        //public override async Task<ExamQuestionDto> CreateAsync(ExamQuestionDto input)
+        //{
+        //    var examquestion = ObjectMapper.Map<ExamQuestion>(input);
 
-        public Task<PagedResultDto<ExamQustionDto>> GetAllAsync(ExamQustionDto input)
-        {
-            throw new NotImplementedException();
-        }
+        //    await _examquestionRepository.InsertAsync(examquestion);
 
-        public Task<ExamQustionDto> GetAsync(EntityDto<int> input)
-        {
-            throw new NotImplementedException();
-        }
+        //    return MapToEntityDto(examquestion);
+        //}
 
-        public Task<ExamQustionDto> UpdateAsync(ExamQustionDto input)
-        {
-            throw new NotImplementedException();
-        }
+ 
     }
 }

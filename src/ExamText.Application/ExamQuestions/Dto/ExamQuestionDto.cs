@@ -6,9 +6,9 @@ using Abp.Domain.Entities;
 namespace ExamText.ExamQuestions.Dto
 {
     [AutoMapFrom(typeof(ExamQuestion))]
-    public class ExamQustionDto : EntityDto
+    public class ExamQuestionDto : EntityDto
     {
-       
+
         [Required]
         public string Question { get; set; }
 

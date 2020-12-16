@@ -3,12 +3,8 @@ using ExamText.ExamQuestions.Dto;
 
 namespace ExamText.ExamQuestions
 {
-    public interface IExamQuestionAppService : IAsyncCrudAppService<ExamQustionDto,int,ExamQustionDto>
+    public interface IExamQuestionAppService : IAsyncCrudAppService<ExamQuestionDto,int,PagedExamQuestionsResultRequestDto,ExamQuestionDto,ExamQuestionDto>
     {
-
-
-
-
 
     }
 }

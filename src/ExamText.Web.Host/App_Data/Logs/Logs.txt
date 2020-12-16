@@ -6222,3 +6222,614 @@ INFO  2020-12-14 19:23:27,002 [8    ] c.Infrastructure.ControllerActionInvoker -
 INFO  2020-12-14 19:23:27,002 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
 INFO  2020-12-14 19:23:27,002 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 236.1074ms 200 application/json; charset=utf-8
 INFO  2020-12-14 19:23:27,055 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 243.597ms 200 application/json;charset=utf-8
+DEBUG 2020-12-16 14:23:42,482 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:23:42,544 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:23:42,575 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,580 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,581 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,581 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,582 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,582 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,583 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,584 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,585 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,585 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,586 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,587 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,588 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:42,594 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:23:42,724 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:23:42,724 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:23:42,724 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:23:42,724 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:23:43,447 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:23:44,227 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 14:23:44,413 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 14:23:44,643 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 14:23:44,721 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 14:23:44,840 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 14:23:44,965 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 14:23:45,031 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 14:23:45,150 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-16 14:23:45,150 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 14:23:45,163 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 14:23:45,164 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 14:23:45,165 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 14:23:45,165 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 14:23:45,165 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 14:23:45,166 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 14:23:45,166 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 14:23:45,166 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQustionDto
+DEBUG 2020-12-16 14:23:45,167 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-16 14:23:50,986 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 14:23:51,498 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 14:23:51,626 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 14:23:51,868 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:23:54,502 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 14:23:56,126 [8    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 14:23:56,140 [8    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 1627.9489ms
+INFO  2020-12-16 14:23:56,142 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:23:56,172 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4547.5103ms 302 
+INFO  2020-12-16 14:23:56,179 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:23:56,304 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 125.5116ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:23:56,548 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:23:56,567 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:23:56,585 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:23:56,624 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:23:56,643 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:23:56,861 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 275.6237ms
+INFO  2020-12-16 14:23:56,861 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:23:56,862 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 314.6422ms 200 application/json; charset=utf-8
+ERROR 2020-12-16 14:23:56,960 [7    ] AspNetCore.Server.IIS.Core.IISHttpServer - Connection ID "18374686489872171034", Request ID "8000001c-0002-ff00-b63f-84710c7967bb": An unhandled exception was thrown by the application.
+System.NotSupportedException: Conflicting method/path combination "PUT api/services/app/Examinee/Update" for actions - ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application),ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Abp.AspNetCore.Security.AbpSecurityHeadersMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISHttpContextOfT`1.ProcessRequestAsync()
+INFO  2020-12-16 14:23:56,966 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 322.4256ms 500 
+DEBUG 2020-12-16 14:27:38,440 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:27:38,499 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:27:38,528 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,533 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,534 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,535 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,536 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,536 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,537 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,538 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,538 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,538 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,539 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,540 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:38,546 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:27:38,643 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:27:38,643 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:27:38,643 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:27:38,643 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:27:39,323 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:27:39,973 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 14:27:40,062 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 14:27:40,104 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 14:27:40,121 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 14:27:40,150 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 14:27:40,191 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 14:27:40,212 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 14:27:40,245 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-16 14:27:40,245 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 14:27:40,249 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 14:27:40,249 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 14:27:40,249 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQustionDto
+DEBUG 2020-12-16 14:27:40,250 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-16 14:27:42,441 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 14:27:42,615 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 14:27:42,658 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 14:27:42,749 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:43,897 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 14:27:44,358 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 14:27:44,363 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 461.9841ms
+INFO  2020-12-16 14:27:44,364 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:44,375 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1717.7503ms 302 
+INFO  2020-12-16 14:27:44,380 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:27:44,421 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 40.6078ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:27:44,528 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:27:44,533 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:44,539 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:27:44,557 [13   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:27:44,566 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:27:44,655 [13   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 116.4861ms
+INFO  2020-12-16 14:27:44,655 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:44,656 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 127.4197ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:27:44,687 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 121.5769ms 200 application/json;charset=utf-8
+INFO  2020-12-16 14:27:57,076 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 56
+INFO  2020-12-16 14:27:57,086 [4    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:27:57,086 [4    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:27:57,091 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-16 14:27:57,131 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+INFO  2020-12-16 14:27:58,071 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate application/json 56
+INFO  2020-12-16 14:27:58,072 [11   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:27:58,072 [11   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:27:58,079 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-16 14:27:58,090 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+INFO  2020-12-16 14:27:59,041 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:27:59,041 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:27:59,055 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 1923.6627ms
+INFO  2020-12-16 14:27:59,055 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 964.3027ms
+INFO  2020-12-16 14:27:59,055 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-16 14:27:59,055 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-16 14:27:59,056 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1980.2903ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:27:59,056 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 985.5007ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:27:59,116 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:27:59,130 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 14.4447ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:27:59,368 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:27:59,437 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:27:59,532 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:27:59,532 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:27:59,699 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:59,720 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:27:59,745 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:27:59,749 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 28.6598ms
+INFO  2020-12-16 14:27:59,749 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:27:59,750 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 382.4862ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:27:59,848 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 411.4231ms 200 application/json;charset=utf-8
+INFO  2020-12-16 14:28:29,692 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Examinee/GetExamineesCount  
+INFO  2020-12-16 14:28:29,696 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:28:29,698 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application)'
+INFO  2020-12-16 14:28:29,710 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetExamineesCount", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int32] GetExamineesCount() on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+INFO  2020-12-16 14:28:30,164 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:28:30,166 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application) in 455.1604ms
+INFO  2020-12-16 14:28:30,166 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application)'
+INFO  2020-12-16 14:28:30,167 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 475.1378ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:28:55,896 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Examinee/Update application/json-patch+json 126
+INFO  2020-12-16 14:28:55,897 [12   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:28:55,897 [12   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:28:55,906 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:28:55,909 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:28:55,936 [12   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Examinees.Dto.ExamineeDto] UpdateAsync(ExamText.Examinees.Dto.UpdataExamineeDto) on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+ERROR 2020-12-16 14:28:56,149 [12   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+   at lambda_method(Closure , Object , Examinee , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TDestination](Object source)
+   at ExamText.Examinees.ExamineeAppService.UpdateAsync(UpdataExamineeDto input) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Application\Examinees\ExamineeAppService.cs:line 59
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-16 14:28:56,464 [12   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:28:56,474 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application) in 537.7781ms
+INFO  2020-12-16 14:28:56,474 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:28:56,476 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 580.1311ms 500 application/json; charset=utf-8
+DEBUG 2020-12-16 14:30:54,803 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:30:54,833 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:30:54,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,851 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,852 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,853 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:30:54,856 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:30:54,900 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:30:54,900 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:30:54,900 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:30:54,900 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:31:00,721 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:31:00,738 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:31:00,757 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,762 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,763 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,764 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,764 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,765 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,766 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,767 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,767 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,768 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,768 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:00,774 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:31:00,873 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:31:00,873 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:31:00,873 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:31:00,873 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:31:01,620 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:31:02,493 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 14:31:02,669 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 14:31:02,788 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 14:31:02,840 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 14:31:02,924 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 14:31:03,054 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 14:31:03,142 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 14:31:03,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-16 14:31:03,266 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 14:31:03,280 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 14:31:03,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 14:31:03,281 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQustionDto
+DEBUG 2020-12-16 14:31:03,282 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-16 14:31:08,318 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 14:31:08,516 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 14:31:08,629 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 14:31:08,629 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:31:08,847 [13   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:31:08,983 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 356.1199ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:31:11,517 [13   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 14:31:12,851 [4    ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 14:31:12,865 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 1337.7322ms
+INFO  2020-12-16 14:31:12,866 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:31:12,882 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4256.0498ms 302 
+INFO  2020-12-16 14:31:12,893 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:31:12,907 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 13.4784ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:31:13,105 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:31:13,140 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:31:13,314 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:31:13,314 [8    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:31:13,431 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:31:13,452 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:31:13,507 [7    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:31:13,613 [7    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 159.8844ms
+INFO  2020-12-16 14:31:13,613 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:31:13,613 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 507.8902ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:31:13,783 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 643.0258ms 200 application/json;charset=utf-8
+INFO  2020-12-16 14:31:22,606 [8    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Examinee/GetExaminees  
+INFO  2020-12-16 14:31:22,609 [8    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:31:22,610 [8    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.GetExaminees (ExamText.Application)'
+INFO  2020-12-16 14:31:22,620 [8    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetExaminees", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.ListResultDto`1[ExamText.Examinees.Dto.ExamineeDto]] GetExaminees() on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+INFO  2020-12-16 14:31:23,364 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:31:23,435 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.GetExaminees (ExamText.Application) in 815.2966ms
+INFO  2020-12-16 14:31:23,436 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.GetExaminees (ExamText.Application)'
+INFO  2020-12-16 14:31:23,437 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 831.2607ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:31:49,380 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/Examinee/GetExamineesCount  
+INFO  2020-12-16 14:31:49,388 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:31:49,390 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application)'
+INFO  2020-12-16 14:31:49,404 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetExamineesCount", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Int32] GetExamineesCount() on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+INFO  2020-12-16 14:31:49,433 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:31:49,435 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application) in 30.5542ms
+INFO  2020-12-16 14:31:49,436 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.GetExamineesCount (ExamText.Application)'
+INFO  2020-12-16 14:31:49,436 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 56.5522ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:32:11,538 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Examinee/Update application/json-patch+json 59
+INFO  2020-12-16 14:32:11,542 [15   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:32:11,542 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:32:11,546 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:32:11,548 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:32:11,639 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Examinees.Dto.ExamineeDto] UpdateAsync(ExamText.Examinees.Dto.UpdataExamineeDto) on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+ERROR 2020-12-16 14:32:11,880 [19   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+   at lambda_method(Closure , Object , Examinee , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TDestination](Object source)
+   at ExamText.Examinees.ExamineeAppService.UpdateAsync(UpdataExamineeDto input) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Application\Examinees\ExamineeAppService.cs:line 59
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-16 14:32:12,155 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:32:12,161 [19   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application) in 521.9674ms
+INFO  2020-12-16 14:32:12,162 [19   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:32:12,163 [19   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 624.8864ms 500 application/json; charset=utf-8
+DEBUG 2020-12-16 14:33:35,711 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:33:35,766 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:33:35,802 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,808 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,808 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,809 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,810 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,811 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,812 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,813 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,814 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:35,819 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:33:35,999 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:33:35,999 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:33:35,999 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:33:35,999 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:33:36,713 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:33:37,792 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 14:33:37,973 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 14:33:38,096 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 14:33:38,146 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 14:33:38,258 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 14:33:38,383 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 14:33:38,442 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 14:33:38,546 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-12-16 14:33:38,547 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 14:33:38,567 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 14:33:38,569 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 14:33:38,570 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 14:33:38,570 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 14:33:38,570 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 14:33:38,571 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 14:33:38,571 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 14:33:38,571 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQustionDto
+DEBUG 2020-12-16 14:33:38,572 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+DEBUG 2020-12-16 14:33:38,572 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.UpdataExamineeDto
+INFO  2020-12-16 14:33:43,717 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 14:33:44,219 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 14:33:44,400 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 14:33:44,711 [7    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:33:47,009 [7    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 14:33:48,372 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 14:33:48,383 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 1366.3294ms
+INFO  2020-12-16 14:33:48,385 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:33:48,413 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4016.4186ms 302 
+INFO  2020-12-16 14:33:48,420 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:33:48,553 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 132.3208ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:33:48,787 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:33:48,873 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:33:49,270 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:33:49,270 [7    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:33:49,494 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:33:49,525 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:33:49,580 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:33:49,735 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 209.4063ms
+INFO  2020-12-16 14:33:49,735 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:33:49,737 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 950.5558ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:33:50,050 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1176.7609ms 200 application/json;charset=utf-8
+INFO  2020-12-16 14:34:15,974 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Examinee/Update application/json-patch+json 59
+INFO  2020-12-16 14:34:15,979 [15   ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:34:15,979 [15   ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:34:15,983 [15   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:34:15,986 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:34:16,018 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Examinees.Dto.ExamineeDto] UpdateAsync(ExamText.Examinees.Dto.UpdataExamineeDto) on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+ERROR 2020-12-16 14:34:16,685 [21   ] Mvc.ExceptionHandling.AbpExceptionFilter - Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Examinee
+System.Object -> ExamText.Examinees.Examinee
+   at lambda_method(Closure , Object , Examinee , ResolutionContext )
+   at Abp.AutoMapper.AutoMapperObjectMapper.Map[TDestination](Object source)
+   at ExamText.Examinees.ExamineeAppService.UpdateAsync(UpdataExamineeDto input) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Application\Examinees\ExamineeAppService.cs:line 59
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-16 14:34:17,096 [21   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:34:17,112 [21   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application) in 1093.1221ms
+INFO  2020-12-16 14:34:17,112 [21   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:34:17,114 [21   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1139.6413ms 500 application/json; charset=utf-8
+DEBUG 2020-12-16 14:36:52,638 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 14:36:52,684 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 14:36:52,720 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,724 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,725 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,726 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,727 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,728 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,728 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,729 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,729 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:52,737 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 14:36:52,843 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:36:52,843 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:36:52,843 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:36:52,843 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 14:36:53,538 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 14:36:54,626 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 14:36:54,837 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 14:36:54,959 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 14:36:55,011 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 14:36:55,105 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 14:36:55,223 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 14:36:55,286 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 14:36:55,399 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-16 14:36:55,399 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 14:36:55,413 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 14:36:55,415 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 14:36:55,415 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 14:36:55,415 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 14:36:55,416 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 14:36:55,416 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 14:36:55,416 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 14:36:55,416 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQustionDto
+DEBUG 2020-12-16 14:36:55,417 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-16 14:36:58,360 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 14:36:58,714 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 14:36:58,817 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 14:36:58,995 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:37:00,746 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 14:37:01,222 [14   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 14:37:01,226 [14   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 476.7932ms
+INFO  2020-12-16 14:37:01,227 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 14:37:01,238 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 2422.3204ms 302 
+INFO  2020-12-16 14:37:01,242 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 14:37:01,289 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 47.5078ms 200 text/html;charset=utf-8
+INFO  2020-12-16 14:37:01,398 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 14:37:01,433 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 14:37:01,522 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:37:01,522 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:37:01,564 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:37:01,569 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 14:37:01,589 [4    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:37:01,618 [4    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 48.7838ms
+INFO  2020-12-16 14:37:01,618 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 14:37:01,618 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 219.8147ms 200 application/json; charset=utf-8
+INFO  2020-12-16 14:37:01,685 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 251.5964ms 200 application/json;charset=utf-8
+INFO  2020-12-16 14:37:29,437 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Examinee/Update application/json-patch+json 61
+INFO  2020-12-16 14:37:29,439 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:37:29,439 [9    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:37:29,441 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:37:29,442 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:37:29,622 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Examinees.Dto.ExamineeDto] UpdateAsync(ExamText.Examinees.Dto.UpdataExamineeDto) on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+ERROR 2020-12-16 14:37:30,332 [19   ] Mvc.ExceptionHandling.AbpExceptionFilter - There is no such an entity. Entity type: ExamText.Examinees.Examinee, id: 0
+Abp.Domain.Entities.EntityNotFoundException: There is no such an entity. Entity type: ExamText.Examinees.Examinee, id: 0
+   at Abp.Domain.Repositories.AbpRepositoryBase`2.Get(TPrimaryKey id)
+   at Castle.Proxies.Invocations.IRepository`2_Get_23.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.IRepository`1Proxy_3.Get(Int32 id)
+   at ExamText.Examinees.ExamineeAppService.UpdateAsync(UpdataExamineeDto input) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Application\Examinees\ExamineeAppService.cs:line 59
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Auditing.AuditingInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at Abp.Runtime.Validation.Interception.ValidationInterceptor.InternalInterceptAsynchronous[TResult](IInvocation invocation)
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-16 14:37:30,707 [19   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:37:30,717 [19   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application) in 1094.8642ms
+INFO  2020-12-16 14:37:30,717 [19   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:37:30,718 [19   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1281.3222ms 404 application/json; charset=utf-8
+INFO  2020-12-16 14:37:58,128 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 PUT http://localhost:21021/api/services/app/Examinee/Update application/json-patch+json 61
+INFO  2020-12-16 14:37:58,130 [9    ] pNetCore.Cors.Infrastructure.CorsService - CORS policy execution failed.
+INFO  2020-12-16 14:37:58,131 [9    ] pNetCore.Cors.Infrastructure.CorsService - Request origin http://localhost:21021 does not have permission to access the resource.
+INFO  2020-12-16 14:37:58,141 [9    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 14:37:58,144 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:37:58,152 [9    ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "Update", controller = "Examinee"}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Examinees.Dto.ExamineeDto] UpdateAsync(ExamText.Examinees.Dto.UpdataExamineeDto) on controller ExamText.Examinees.ExamineeAppService (ExamText.Application).
+INFO  2020-12-16 14:37:58,281 [9    ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 14:37:58,300 [9    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application) in 147.8791ms
+INFO  2020-12-16 14:37:58,300 [9    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.UpdateAsync (ExamText.Application)'
+INFO  2020-12-16 14:37:58,301 [9    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 172.7914ms 200 application/json; charset=utf-8
+DEBUG 2020-12-16 15:01:44,935 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-16 15:01:44,986 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-16 15:01:45,019 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,031 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:45,036 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-16 15:01:45,140 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 15:01:45,140 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 15:01:45,140 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 15:01:45,140 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-16 15:01:45,946 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-16 15:01:46,375 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-16 15:01:46,443 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-16 15:01:46,488 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-16 15:01:46,506 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-16 15:01:46,536 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-16 15:01:46,586 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-16 15:01:46,608 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-16 15:01:46,642 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-16 15:01:46,643 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-16 15:01:46,647 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-16 15:01:46,647 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-16 15:01:46,648 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-16 15:01:48,788 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-16 15:01:49,000 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-16 15:01:49,038 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-16 15:01:49,098 [4    ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 15:01:49,957 [4    ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-16 15:01:50,419 [15   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-16 15:01:50,423 [15   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 462.738ms
+INFO  2020-12-16 15:01:50,423 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-16 15:01:50,433 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1395.845ms 302 
+INFO  2020-12-16 15:01:50,437 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-16 15:01:50,480 [15   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 42.8606ms 200 text/html;charset=utf-8
+INFO  2020-12-16 15:01:50,583 [13   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-16 15:01:50,618 [4    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-16 15:01:50,701 [13   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 15:01:50,701 [4    ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-16 15:01:50,746 [15   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 15:01:50,750 [15   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-16 15:01:50,767 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-16 15:01:50,797 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 46.4371ms
+INFO  2020-12-16 15:01:50,797 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-16 15:01:50,797 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 214.5198ms 200 application/json; charset=utf-8
+INFO  2020-12-16 15:01:50,854 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 235.9441ms 200 application/json;charset=utf-8

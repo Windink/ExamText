@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Identity;
 namespace ExamText.Examinees
 {
     //[AbpAuthorize(PermissionNames.Pages_Examinees)]
-    public class ExamineeAppService :AsyncCrudAppService<Examinee,ExamineeDto,int,PagedExamineeResultRequestDto,CreateExamineeDto,ExamineeDto> ,IExamineeAppService
+    public class ExamineeAppService :AsyncCrudAppService<Examinee,ExamineeDto,int,PagedExamineeResultRequestDto,CreateExamineeDto, UpdataExamineeDto> ,IExamineeAppService
     {
         private readonly IRepository<Examinee> _examineeRepository;
 
@@ -22,7 +22,6 @@ namespace ExamText.Examinees
         {
             _examineeRepository = examineeRepository;
         }
-
 
 
         public override async Task<ExamineeDto> CreateAsync(CreateExamineeDto input)
@@ -52,11 +51,16 @@ namespace ExamText.Examinees
             return  MapToEntityDto(examinee);
         }
 
-        public override async Task<ExamineeDto> UpdateAsync(ExamineeDto input)
+        public override async Task<ExamineeDto> UpdateAsync(UpdataExamineeDto input)
         {
             CheckUpdatePermission();
 
-            var examinee = ObjectMapper.Map<Examinee>(input);
+            var examinee = _examineeRepository.Get(input.Id);
+
+            examinee.Name = input.Name;
+            examinee.ExamLoginPassword = input.ExamLoginPassword;
+            examinee.State = input.State;
+
             await _examineeRepository.UpdateAsync(examinee);
 
             return MapToEntityDto(examinee);
@@ -87,5 +91,19 @@ namespace ExamText.Examinees
             var examinees = await _examineeRepository.GetAllListAsync();
             return examinees.Count;
         }
+
+        public void UpdataExamineesPicture(UpdateExamineePictureDto input)
+        {
+            CheckUpdatePermission();
+            var examinee = _examineeRepository.Get(input.Id);
+
+            Bitmap bitmap = input.Picture;
+
+            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + examinee.Name + ".jpg";
+
+            bitmap.Save(filename);
+
+        }
+
     }
 }

@@ -4,14 +4,16 @@ using ExamText.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamText.Migrations
 {
     [DbContext(typeof(ExamTextDbContext))]
-    partial class ExamTextDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201216073358_CreateExams")]
+    partial class CreateExams
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
