@@ -4,15 +4,17 @@ using System.Drawing;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
+using Abp.Authorization;
 using Abp.Domain.Repositories;
 using Abp.IdentityFramework;
 using Abp.Timing;
+using ExamText.Authorization;
 using ExamText.Examinees.Dto;
 using Microsoft.AspNetCore.Identity;
 
 namespace ExamText.Examinees
 {
-    //[AbpAuthorize(PermissionNames.Pages_Examinees)]
+    [AbpAuthorize(PermissionNames.Pages_Examinees)]
     public class ExamineeAppService :AsyncCrudAppService<Examinee,ExamineeDto,int,PagedExamineeResultRequestDto,CreateExamineeDto, UpdataExamineeDto> ,IExamineeAppService
     {
         private readonly IRepository<Examinee> _examineeRepository;
