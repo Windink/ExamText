@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ExamText.Examinees.Dto
 {
-    public class UpdateExamineePictureDto : EntityDto<long>
+    public class UpdateExamineePictureDto : EntityDto
     {
         public Bitmap Picture { get; set; }
     }

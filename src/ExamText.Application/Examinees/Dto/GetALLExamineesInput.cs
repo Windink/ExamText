@@ -5,8 +5,8 @@ using static ExamText.Examinees.Examinee;
 
 namespace ExamText.Examinees.Dto
 {
-    public class GetALLExamineesInput
+    class GetALLExamineesInput
     {
-        
+        public TaskState? state { get; set; }
     }
 }

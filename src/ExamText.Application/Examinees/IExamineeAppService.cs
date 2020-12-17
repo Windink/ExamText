@@ -5,14 +5,13 @@ using ExamText.Examinees.Dto;
 
 namespace ExamText.Examinees
 {
-    public interface IExamineeAppService : IAsyncCrudAppService<ExamineeDto, long, PagedExamineeResultRequestDto,CreateExamineeDto,UpdateExamineePictureDto>
+    public interface IExamineeAppService : IAsyncCrudAppService<ExamineeDto,int,PagedExamineeResultRequestDto,CreateExamineeDto,UpdataExamineeDto>
     {
-        //Task<ListResultDto<ExamineeDto>> GetExaminees();
+        Task<ListResultDto<ExamineeDto>> GetExaminees();
 
         Task<int> GetExamineesCount();
 
-     //   void UpdataExamineesPicture(UpdateExamineePictureDto input);
-
+        void UpdataExamineesPicture(UpdateExamineePictureDto input);
 
     }
 }

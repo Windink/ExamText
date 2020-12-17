@@ -9,54 +9,43 @@ using Abp.Domain.Repositories;
 using Abp.IdentityFramework;
 using Abp.Timing;
 using ExamText.Authorization;
-using ExamText.Authorization.Users;
 using ExamText.Examinees.Dto;
 using Microsoft.AspNetCore.Identity;
 
 namespace ExamText.Examinees
 {
     [AbpAuthorize(PermissionNames.Pages_Examinees)]
-    public class ExamineeAppService : AsyncCrudAppService<Examinee,ExamineeDto,long,PagedExamineeResultRequestDto,CreateExamineeDto,UpdateExamineePictureDto> ,IExamineeAppService
+    public class ExamineeAppService :AsyncCrudAppService<Examinee,ExamineeDto,int,PagedExamineeResultRequestDto,CreateExamineeDto, UpdataExamineeDto> ,IExamineeAppService
     {
-        private readonly IRepository<Examinee,long> _examineeRepository;
+        private readonly IRepository<Examinee> _examineeRepository;
 
-        private readonly IRepository<User, long> _userRepository;
 
-        public ExamineeAppService(IRepository<Examinee,long> examineeRepository, IRepository<User, long> userRepository) 
-            :base(examineeRepository)
+        public ExamineeAppService(IRepository<Examinee> examineeRepository):base(examineeRepository)
         {
             _examineeRepository = examineeRepository;
-            _userRepository = userRepository;
         }
 
-        /// <summary>
-        /// Create先保存图片到本地，在保存图片地址到数据库
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
+
         public override async Task<ExamineeDto> CreateAsync(CreateExamineeDto input)
         {
             CheckCreatePermission();
+            Bitmap bitmap = input.Picture;
 
-            var user = await _userRepository.GetAsync(input.Id);
-
-           
-
-            Bitmap bitmap = input.Picture;          
-
-            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + input.user.Name + ".jpg";
+            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + input.Name + ".jpg";
 
             bitmap.Save(filename);
 
             Examinee examinee = new Examinee()
             {
                 Id = input.Id,
-                PicturePath = filename,
-                user = input.user
-                
+                CreationTime = Clock.Now,
+                ExamLoginNum = input.ExamLoginNum,
+                ExamLoginPassword = input.ExamLoginPassword,
+                Name = input.Name,
+                State = input.State,
+                PicturePath = filename
             };
 
-            user.examinee = examinee;
             //var examinee = ObjectMapper.Map<Examinee>(input);
 
             await _examineeRepository.InsertAsync(examinee);
@@ -64,59 +53,35 @@ namespace ExamText.Examinees
             return  MapToEntityDto(examinee);
         }
 
-        /// <summary>
-        /// 只可以get得到自己
-        /// </summary>
-        /// <returns></returns>
-        /// 
-        public override async Task<ExamineeDto> GetAsync(EntityDto<long> input)
+        public override async Task<ExamineeDto> UpdateAsync(UpdataExamineeDto input)
         {
-            CheckGetPermission();
-            return await GetAsync(input);
-        }
-
-        /// <summary>
-        /// 不需要删除权限
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public override Task DeleteAsync(EntityDto<long> input)
-        {
-            CheckCreatePermission();
-            return null;
-        }
-
-        /// <summary>
-        /// 不需要getAll权限
-        /// </summary>
-        /// <param name="identityResult"></param>
-        public override Task<PagedResultDto<ExamineeDto>> GetAllAsync(PagedExamineeResultRequestDto input)
-        {
-            CheckGetAllPermission();
-            return null;
-        }
-
-        /// <summary>
-        /// 只可以改变自己的Picture
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public override async Task<ExamineeDto> UpdateAsync(UpdateExamineePictureDto input)
-        {
-
             CheckUpdatePermission();
+
             var examinee = _examineeRepository.Get(input.Id);
 
-            var user = _userRepository.Get(input.Id);
+            examinee.Name = input.Name;
+            examinee.ExamLoginPassword = input.ExamLoginPassword;
+            examinee.State = input.State;
 
-            Bitmap bitmap = input.Picture;
+            await _examineeRepository.UpdateAsync(examinee);
 
-            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + user.Name + ".jpg";
-
-            bitmap.Save(filename);
-
-            return await UpdateAsync(input);
+            return MapToEntityDto(examinee);
         }
+
+        public async Task<ListResultDto<ExamineeDto>> GetExaminees()
+        {
+            CheckGetPermission();
+            var examinee = await _examineeRepository.GetAllListAsync();
+            return new ListResultDto<ExamineeDto>(ObjectMapper.Map<List<ExamineeDto>>(examinee));
+        }
+
+        public override async Task DeleteAsync(EntityDto<int> input)
+        {
+            CheckDeletePermission();
+            var examinee = _examineeRepository.Get(input.Id);
+            await _examineeRepository.DeleteAsync(examinee);
+        }
+
 
         protected virtual void CheckErrors(IdentityResult identityResult)
         {
@@ -129,18 +94,18 @@ namespace ExamText.Examinees
             return examinees.Count;
         }
 
-        //public void UpdataExamineesPicture(UpdateExamineePictureDto input)
-        //{
-        //    CheckUpdatePermission();
-        //    var examinee = _examineeRepository.Get(input.Id);
+        public void UpdataExamineesPicture(UpdateExamineePictureDto input)
+        {
+            CheckUpdatePermission();
+            var examinee = _examineeRepository.Get(input.Id);
 
-        //    Bitmap bitmap = input.Picture;
+            Bitmap bitmap = input.Picture;
 
-        //    string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + examinee.Name + ".jpg";
+            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + examinee.Name + ".jpg";
 
-        //    bitmap.Save(filename);
+            bitmap.Save(filename);
 
-        //}
+        }
 
     }
 }

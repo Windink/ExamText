@@ -12,8 +12,6 @@ namespace ExamText.Authorization
             context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
             context.CreatePermission(PermissionNames.Pages_Examinees, L("Examinees"));
-            context.CreatePermission(PermissionNames.Pages_ExamCompletions, L("ExamCompletion"));
-            context.CreatePermission(PermissionNames.Pages_ExamQuestions, L("ExamQuestions"));
         }
 
         private static ILocalizableString L(string name)

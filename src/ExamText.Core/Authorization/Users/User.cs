@@ -2,16 +2,12 @@
 using System.Collections.Generic;
 using Abp.Authorization.Users;
 using Abp.Extensions;
-using ExamText.Examinees;
 
 namespace ExamText.Authorization.Users
 {
     public class User : AbpUser<User>
     {
         public const string DefaultPassword = "123qwe";
-
-        public Examinee examinee { get; set; }
-
 
         public static string CreateRandomPassword()
         {
