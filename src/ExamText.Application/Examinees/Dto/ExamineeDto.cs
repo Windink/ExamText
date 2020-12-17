@@ -7,27 +7,16 @@ using static ExamText.Examinees.Examinee;
 namespace ExamText.Examinees.Dto
 {
     [AutoMapFrom(typeof(Examinee))]
-    public class ExamineeDto : EntityDto
-    {
-
-        [Required]
-        public string Name { get; set; }
-
-        [Required]
-        [StringLength(20)]
-        public string ExamLoginNum { get; set; }
-
-        [Required]
-        [StringLength(20)]
-        public string ExamLoginPassword { get; set; }
+    public class ExamineeDto : EntityDto<long>
+    {     
 
         public DateTime CreationTime { get; set; }
-
-
+        [Required]
         public String PicturePath { get; set; }
 
-
         public TaskState State { get; set; }
+
+        //public User user { get; set; }
 
     }
 }
