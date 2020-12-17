@@ -7264,3 +7264,588 @@ INFO  2020-12-16 17:52:16,746 [6    ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2020-12-16 17:52:16,760 [6    ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Examinees.ExamineeAppService.GetAllAsync (ExamText.Application) in 465.8523ms
 INFO  2020-12-16 17:52:16,760 [6    ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Examinees.ExamineeAppService.GetAllAsync (ExamText.Application)'
 INFO  2020-12-16 17:52:16,761 [6    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 487.5796ms 200 application/json; charset=utf-8
+DEBUG 2020-12-17 11:58:48,981 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-17 11:58:49,006 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-17 11:58:49,020 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,022 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,023 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,024 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,026 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:49,029 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-17 11:58:49,087 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:49,087 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:49,087 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:49,087 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:49,597 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:50,060 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-17 11:58:50,147 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-17 11:58:50,193 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-17 11:58:50,211 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-17 11:58:50,239 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-17 11:58:50,280 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-17 11:58:50,303 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-17 11:58:50,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-17 11:58:50,363 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-17 11:58:50,368 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-17 11:58:50,368 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-17 11:58:50,368 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-17 11:58:50,369 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+DEBUG 2020-12-17 11:58:56,769 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-17 11:58:56,787 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-17 11:58:56,801 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,804 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,804 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,805 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,806 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,807 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:56,809 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-17 11:58:56,864 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:56,864 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:56,864 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:56,865 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:58:57,142 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:58:57,579 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-17 11:58:57,643 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-17 11:58:57,687 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-17 11:58:57,705 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-17 11:58:57,736 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-17 11:58:57,778 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-17 11:58:57,803 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-17 11:58:57,862 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-17 11:58:57,862 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-17 11:58:57,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-17 11:58:57,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-17 11:58:57,868 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-17 11:58:57,869 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+DEBUG 2020-12-17 11:59:02,706 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-17 11:59:02,725 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-17 11:59:02,741 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,743 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,744 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,744 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,744 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,744 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,744 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,745 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,745 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,745 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,745 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,745 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:02,748 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-17 11:59:02,786 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:59:02,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:59:02,786 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:59:02,786 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 11:59:03,082 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 11:59:03,455 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-17 11:59:03,520 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-17 11:59:03,564 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-17 11:59:03,582 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-17 11:59:03,612 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-17 11:59:03,655 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-17 11:59:03,677 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-17 11:59:03,715 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-17 11:59:03,715 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-17 11:59:03,719 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-17 11:59:03,719 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-17 11:59:03,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+FATAL 2020-12-17 11:59:05,319 [1    ] Abp.AbpBootstrapper                      - Microsoft.Data.SqlClient.SqlException (0x80131904): 列名 'examineeId' 无效。
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 70
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at ExamText.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ExamTextDbContext context) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule.PostInitialize() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\ExamTextEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:f6af2405-d42b-4703-bfda-185f9adf663b
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): 列名 'examineeId' 无效。
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 70
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at ExamText.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ExamTextDbContext context) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule.PostInitialize() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\ExamTextEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+ClientConnectionId:f6af2405-d42b-4703-bfda-185f9adf663b
+Error Number:207,State:1,Class:16
+FATAL 2020-12-17 11:59:05,341 [1    ] Microsoft.AspNetCore.Hosting.WebHost     - Application startup exception
+Microsoft.Data.SqlClient.SqlException (0x80131904): 列名 'examineeId' 无效。
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.InitializeReader(DbContext _, Boolean result)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SingleOrDefault[TSource](IEnumerable`1 source)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.Execute[TResult](Expression expression)
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.CreateHostRoleAndUsers() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 70
+   at ExamText.EntityFrameworkCore.Seed.Host.HostRoleAndUserCreator.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\HostRoleAndUserCreator.cs:line 26
+   at ExamText.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 16
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(ExamTextDbContext context) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.WithDbContext[TDbContext](IIocResolver iocResolver, Action`1 contextAction) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 41
+   at ExamText.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(IIocResolver iocResolver) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 17
+   at ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule.PostInitialize() in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.EntityFrameworkCore\EntityFrameworkCore\ExamTextEntityFrameworkModule.cs:line 46
+   at Abp.Modules.AbpModuleManager.<>c.<StartModules>b__15_2(AbpModuleInfo module)
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Abp.Modules.AbpModuleManager.StartModules()
+   at Abp.AbpBootstrapper.Initialize()
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.InitializeAbp(IApplicationBuilder app)
+   at Abp.AspNetCore.AbpApplicationBuilderExtensions.UseAbp(IApplicationBuilder app, Action`1 optionsAction)
+   at ExamText.Web.Host.Startup.Startup.Configure(IApplicationBuilder app, ILoggerFactory loggerFactory) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Web.Host\Startup\Startup.cs:line 122
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.WebHost.BuildApplication()
+ClientConnectionId:f6af2405-d42b-4703-bfda-185f9adf663b
+Error Number:207,State:1,Class:16
+WARN  2020-12-17 11:59:08,665 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:13,684 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:18,687 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:23,700 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:28,716 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:33,718 [5    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+WARN  2020-12-17 11:59:38,720 [8    ] Abp.BackgroundJobs.BackgroundJobManager  - Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+Abp.AbpException: Unknown filter name: MayHaveTenant. Be sure this filter is registered before.
+   at Abp.Domain.Uow.UnitOfWorkBase.GetFilterIndex(String filterName)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetFilterParameter(String filterName, String parameterName, Object value)
+   at Abp.Domain.Uow.UnitOfWorkBase.SetTenantId(Nullable`1 tenantId, Boolean switchMustHaveTenantEnableDisable)
+   at Abp.Domain.Uow.UnitOfWorkBase.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkManager.Begin(UnitOfWorkOptions options)
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobStoreProxy.GetWaitingJobs(Int32 maxResultCount)
+   at Abp.BackgroundJobs.BackgroundJobManager.DoWork()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork_callback()
+   at Castle.Proxies.Invocations.BackgroundJobManager_DoWork.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.InterceptSynchronous(IInvocation invocation)
+   at Castle.DynamicProxy.AsyncDeterminationInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.BackgroundJobManagerProxy.DoWork()
+   at Abp.Threading.BackgroundWorkers.PeriodicBackgroundWorkerBase.Timer_Elapsed(Object sender, EventArgs e)
+DEBUG 2020-12-17 11:59:51,128 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-17 11:59:51,148 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-17 12:00:03,965 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-17 12:00:03,989 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-17 12:00:04,006 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,008 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,009 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,010 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,010 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,011 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,012 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,012 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,014 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-17 12:00:04,088 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 12:00:04,088 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 12:00:04,088 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 12:00:04,088 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-17 12:00:04,401 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-17 12:00:04,790 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-17 12:00:04,853 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-17 12:00:04,895 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-17 12:00:04,913 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-17 12:00:04,942 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-17 12:00:04,999 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-17 12:00:05,024 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-17 12:00:05,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 10 classes define auto mapping attributes
+DEBUG 2020-12-17 12:00:05,059 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-17 12:00:05,066 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-17 12:00:05,068 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-17 12:00:05,069 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-17 12:00:05,069 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-17 12:00:05,069 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-17 12:00:05,069 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-17 12:00:05,069 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-17 12:00:05,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-17 12:00:05,070 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+INFO  2020-12-17 12:00:07,124 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-17 12:00:07,315 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-17 12:00:07,375 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-17 12:00:07,375 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-17 12:00:07,449 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:07,449 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:08,294 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-17 12:00:08,294 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-17 12:00:08,927 [11   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-17 12:00:08,927 [10   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-17 12:00:08,931 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 633.9355ms
+INFO  2020-12-17 12:00:08,931 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 633.9038ms
+INFO  2020-12-17 12:00:08,932 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:08,932 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:08,937 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1562.9429ms 0 
+INFO  2020-12-17 12:00:08,943 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1569.4047ms 302 
+INFO  2020-12-17 12:00:08,948 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-17 12:00:08,995 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 47.6974ms 200 text/html;charset=utf-8
+INFO  2020-12-17 12:00:09,013 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-17 12:00:09,017 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-17 12:00:09,022 [10   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-17 12:00:09,022 [11   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-17 12:00:09,025 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 7.7526ms 304 application/javascript
+INFO  2020-12-17 12:00:09,025 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 11.6816ms 304 application/javascript
+INFO  2020-12-17 12:00:09,108 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-17 12:00:09,145 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-17 12:00:09,238 [10   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-17 12:00:09,238 [11   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-17 12:00:09,285 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:09,289 [10   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-17 12:00:09,300 [10   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-17 12:00:09,328 [10   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 38.4644ms
+INFO  2020-12-17 12:00:09,328 [10   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-17 12:00:09,328 [10   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 220.7451ms 200 application/json; charset=utf-8
+INFO  2020-12-17 12:00:09,389 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 243.4773ms 200 application/json;charset=utf-8

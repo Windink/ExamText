@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ExamText.Migrations
 {
     [DbContext(typeof(ExamTextDbContext))]
-    [Migration("20201217032557_ddd")]
-    partial class ddd
+    [Migration("20201217132850_CreatFKs")]
+    partial class CreatFKs
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -1570,28 +1570,13 @@ namespace ExamText.Migrations
 
             modelBuilder.Entity("ExamText.Examinees.Examinee", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnName("ExamnesID")
-                        .HasColumnType("int")
+                        .HasColumnType("bigint")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("ExamLoginNum")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
-
-                    b.Property<string>("ExamLoginPassword")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(20)")
-                        .HasMaxLength(20);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PicturePath")
                         .HasColumnType("nvarchar(max)");
@@ -1599,7 +1584,12 @@ namespace ExamText.Migrations
                     b.Property<byte>("State")
                         .HasColumnType("tinyint");
 
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserID");
 
                     b.ToTable("Examinees");
                 });
@@ -1861,6 +1851,15 @@ namespace ExamText.Migrations
                     b.HasOne("ExamText.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("ExamText.Examinees.Examinee", b =>
+                {
+                    b.HasOne("ExamText.Authorization.Users.User", "user")
+                        .WithMany()
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ExamText.MultiTenancy.Tenant", b =>

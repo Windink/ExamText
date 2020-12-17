@@ -4,14 +4,16 @@ using ExamText.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ExamText.Migrations
 {
     [DbContext(typeof(ExamTextDbContext))]
-    partial class ExamTextDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201217125817_Createnum")]
+    partial class Createnum
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1587,8 +1589,6 @@ namespace ExamText.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserID");
-
                     b.ToTable("Examinees");
                 });
 
@@ -1849,15 +1849,6 @@ namespace ExamText.Migrations
                     b.HasOne("ExamText.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
-                });
-
-            modelBuilder.Entity("ExamText.Examinees.Examinee", b =>
-                {
-                    b.HasOne("ExamText.Authorization.Users.User", "user")
-                        .WithMany()
-                        .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("ExamText.MultiTenancy.Tenant", b =>

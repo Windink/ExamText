@@ -10,7 +10,7 @@ namespace ExamText.Authorization.Users
     {
         public const string DefaultPassword = "123qwe";
 
-        public Examinee examinee { get; set; }
+       // public Examinee examinee { get; set; }
 
 
         public static string CreateRandomPassword()

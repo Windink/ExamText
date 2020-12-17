@@ -16,7 +16,8 @@ namespace ExamText.Examinees.Dto
 
         public TaskState State { get; set; }
 
-        //public User user { get; set; }
+        [Required]
+        public long UserID { get; set; }
 
     }
 }

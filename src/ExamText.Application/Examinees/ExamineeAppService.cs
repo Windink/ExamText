@@ -38,13 +38,13 @@ namespace ExamText.Examinees
         {
             CheckCreatePermission();
 
-            var user = await _userRepository.GetAsync(input.Id);
+            var user = await _userRepository.GetAsync(input.UserID);
 
            
 
             Bitmap bitmap = input.Picture;          
 
-            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + input.user.Name + ".jpg";
+            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + user.Name + ".jpg";
 
             bitmap.Save(filename);
 
@@ -52,11 +52,11 @@ namespace ExamText.Examinees
             {
                 Id = input.Id,
                 PicturePath = filename,
-                user = input.user
+               UserID = input.UserID
                 
             };
 
-            user.examinee = examinee;
+            //user.examinee = examinee;
             //var examinee = ObjectMapper.Map<Examinee>(input);
 
             await _examineeRepository.InsertAsync(examinee);

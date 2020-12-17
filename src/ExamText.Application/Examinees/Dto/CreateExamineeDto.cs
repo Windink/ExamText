@@ -21,8 +21,8 @@ namespace ExamText.Examinees.Dto
         public Bitmap Picture { get; set; }
 
         public TaskState State { get; set; }
-
-        public User user { get; set; }
+        [Required]
+        public long UserID { get; set; }
 
     }
 }

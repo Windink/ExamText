@@ -10,8 +10,8 @@ namespace ExamText.Examinees
 {
     [Table("Examinees")]
      public class Examinee :Entity<long>, IHasCreationTime
-    {   
-      
+    {
+
 
         public DateTime CreationTime { get; set; }
 
@@ -19,10 +19,10 @@ namespace ExamText.Examinees
 
         public TaskState State { get; set; }
 
-        [ForeignKey(nameof(UserId))]
+        //[ForeignKey(nameof(UserId))]
         public User user { get; set; }
-
-        public long UserId { get; set; }
+        [Required]
+        public long UserID { get; set; }
 
         public Examinee()
         {
