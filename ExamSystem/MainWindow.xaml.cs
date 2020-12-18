@@ -33,6 +33,7 @@ namespace ExamSystem
         public MainWindow()
         {
             InitializeComponent();
+            this.Content = new Login();
             classfier = new CascadeClassifier();
             imagebox1.FunctionalMode = Emgu.CV.UI.ImageBox.FunctionalModeOption.Minimum;
         }
@@ -75,6 +76,11 @@ namespace ExamSystem
                 videoCapture.Dispose();
             }
             imagebox1.Visible = false;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            this.Content = new Register();
         }
     }
 }
