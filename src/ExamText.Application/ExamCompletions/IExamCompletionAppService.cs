@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ExamText.ExamCompletion
+namespace ExamText.ExamCompletions
 {
-     public interface IExamCompletionAppService
+     public interface IExamCompletionAppService 
     {
+
     }
 }

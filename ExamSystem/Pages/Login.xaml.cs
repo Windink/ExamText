@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Abp.WebApi.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,9 @@ namespace ExamSystem
     /// </summary>
     public partial class Login : Page
     {
+
+        private readonly IAbpWebApiClient _abpWebApiClient;
+
         public Login()
         {
             InitializeComponent();
@@ -28,6 +32,12 @@ namespace ExamSystem
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
+
+
+
+
+
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

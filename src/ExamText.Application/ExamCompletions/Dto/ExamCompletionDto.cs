@@ -1,16 +1,16 @@
-﻿using Abp.Domain.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using Abp.Application.Services.Dto;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+using Abp.AutoMapper;
 
-namespace ExamText.ExamCompletions
+namespace ExamText.ExamCompletions.Dto
 {
-    [Table("ExamCompletions")]
-    public class ExamCompletion : Entity
+    [AutoMapFrom(typeof(ExamCompletion))]
+    public class ExamCompletionDto : EntityDto
     {
-
         [Required]
         public string Question { get; set; }
 

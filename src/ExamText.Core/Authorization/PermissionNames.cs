@@ -23,5 +23,7 @@
 
 
         public const string Pages_Examinees = "Pages.Examinees";
+
+        public const string Pages_Exam_Questions = "Pages.Exam.Questions";
     }
 }
