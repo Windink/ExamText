@@ -10,8 +10,8 @@
 
     <Grid>
         <UniformGrid Margin="212,114,246,157.6" Columns="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Content="用户名：" HorizontalAlignment="Right"/><TextBox />
-            <Label Content="密码：" HorizontalAlignment="Right"/><TextBox />
+            <Label Content="用户名：" HorizontalAlignment="Right" /><TextBox Name="UserID"/>
+            <Label Content="密码：" HorizontalAlignment="Right" /><TextBox Name="UserPassword"/>
             <Button Content="登录" Click="Button_Click"/>
             <Button Content="注册" Click="Button_Click_1"/>
         </UniformGrid>
