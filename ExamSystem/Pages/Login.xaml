@@ -9,11 +9,14 @@
       Title="Login">
 
     <Grid>
-        <UniformGrid Margin="212,114,246,157.6" Columns="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Content="用户名：" HorizontalAlignment="Right" /><TextBox Name="UserID"/>
-            <Label Content="密码：" HorizontalAlignment="Right" /><TextBox Name="UserPassword"/>
-            <Button Content="登录" Click="Button_Click"/>
-            <Button Content="注册" Click="Button_Click_1"/>
+        
+        <UniformGrid  Columns="2" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Label Content="用户名：" HorizontalAlignment="Right" />
+            <TextBox Name="UserID" Width="200" Height="30" VerticalAlignment="Top"/>
+            <Label Content="密码：" HorizontalAlignment="Right" />
+            <PasswordBox Name="UserPassword" Width="200" Height="30" VerticalAlignment="Top"/>
+            <Button Content="登录" Width="50"  Click="Button_Click" HorizontalAlignment="Right" Margin="0,10,0,10"/>
+            <Button Content="注册" Width="50" Click="Button_Click_1" HorizontalAlignment="Left" Margin="10"/>
         </UniformGrid>
     </Grid>
 </Page>

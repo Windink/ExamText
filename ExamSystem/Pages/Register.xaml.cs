@@ -26,12 +26,7 @@ namespace ExamSystem
         private string baseUrl = "http://localhost:21021";
         public class CreateUser
         {
-            public string userName = "h";
-            public string name = "h";
-            public string surname = "h";
-            public string emailAddress = "usern@example.com";
-            public string[] roleNames = { "Examinees" };
-            public string password = "123";
+            
         }
 
 
@@ -50,7 +45,7 @@ namespace ExamSystem
 
                 CreateUser createUser = new CreateUser();
 
-                var js = JsonConvert.SerializeObject(createUser);
+                var js = JsonConvert.SerializeObject(createUser);              
 
                 MessageBox.Show(js);
 
