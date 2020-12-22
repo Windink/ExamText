@@ -52,7 +52,7 @@ namespace ExamText.Users
             _logInManager = logInManager;
         }
 
-        [AbpAuthorize(PermissionNames.Pages_Users_Create)]
+        //[AbpAuthorize(PermissionNames.Pages_Users_Create)]
         public override async Task<UserDto> CreateAsync(CreateUserDto input)
         {
             CheckCreatePermission();
