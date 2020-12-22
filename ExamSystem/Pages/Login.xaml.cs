@@ -1,4 +1,6 @@
-﻿using Abp.WebApi.Client;
+﻿using Abp;
+using Abp.WebApi.Client;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -26,63 +28,86 @@ namespace ExamSystem
     public partial class Login : Page
     {
 
-        private readonly AbpWebApiClient _abpWebApiClient;
-        private string baseUrl = "http://localhost:21021";
-        
+        private readonly IAbpWebApiClient _abpWebApiClient;
+        private readonly HttpClient client;
+        private string baseUrl = "http://localhost:21021";  //服务器地址
+        private string login_token;
+        private string login_name;
+        private string login_password;
+
+      
+
 
         public Login()
         {
             InitializeComponent();
             _abpWebApiClient = new AbpWebApiClient();
+            client = new HttpClient();
         }
 
+        /// <summary>
+        /// 登录点击事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
-           var result = await Authenticate();
-           GetExamineesCount(result.Values.First());
-
+           await GetToken();
+            GetExamineesCount();
+  
         }
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Application.Current.MainWindow.Content = new Register();
         }
 
-        public async Task<Dictionary<string, string>> Authenticate()
+
+        public async Task GetToken()
         {
-           
-            var url =baseUrl + "/api/TokenAuth/Authenticate";
-            var input = new
+            try
             {
+                var url = baseUrl + "/api/TokenAuth/Authenticate";
 
-                UsernameOrEmailAddress = "admin",
-                Password = "123qwe"
-            };
-            var result = await _abpWebApiClient.PostAsync<Dictionary<string,string>>(url, input);
+                var input = new
+                {
+                    UsernameOrEmailAddress = "admin",
+                    Password = "123qwe"
+                };
+     
+                var result = await _abpWebApiClient.PostAsync<Dictionary<string, string>>(url, input);
 
-            Cookie cookie = new Cookie(result.Keys.First(), result.Values.First());
+                login_token = result.Values.First();
 
-            _abpWebApiClient.Cookies.Add(cookie);
-            //MessageBox.Show(cookie.Name);
-            return result;
+        //MessageBox.Show(result.Keys.ToString());
+    }
+            catch(AbpException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+           // return result;
         }
 
-        
+        public async void GetUserList()
+        {
+            
+        }
 
 
-        public async void GetExamineesCount(string token)
+
+
+        public async void GetExamineesCount()
         {  var uri = baseUrl + "/api/services/app/Examinee/GetExamineesCount";
             //_abpWebApiClient.RequestHeaders.Add(new Abp.NameValue("Authorization","Bearer " +_abpWebApiClient.Cookies.First() ));
            using(var httpclient = new HttpClient())
             {
-                httpclient.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
+                httpclient.DefaultRequestHeaders.Add("Authorization", "Bearer " + login_token);
                 var re = await httpclient.GetAsync(uri);
 
                 var result = await re.Content.ReadAsStringAsync();
                 var obj = JToken.Parse(result);
-                MessageBox.Show(obj["result"].ToString());
+                MessageBox.Show(obj.ToString());
             }
             
           

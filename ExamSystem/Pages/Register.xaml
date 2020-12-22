@@ -5,14 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ExamSystem"
       mc:Ignorable="d" 
-      d:DesignHeight="543.6" d:DesignWidth="956"
+      d:DesignHeight="600" d:DesignWidth="1000"
+      
       Title="Register">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Height="316"  VerticalAlignment="Center" Width="408"  >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" Height="316"  VerticalAlignment="Center" Width="408" Grid.Column="1"  >
 
             <UniformGrid Height="auto" Columns="2">
-                <Label Content="姓名：" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Label Content="用户名：" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <TextBox Height="23" TextWrapping="Wrap" Text="TextBox"  Width="120" RenderTransformOrigin="2.232,4.554" Margin="10" HorizontalAlignment="Left"/>
                 <Label Content="姓名：" HorizontalAlignment="Right" VerticalAlignment="Center"/>
                 <TextBox  Height="23" TextWrapping="Wrap" Text="TextBox" Width="120"  Margin="10" HorizontalAlignment="Left"/>
@@ -22,6 +30,8 @@
                 <PasswordBox  VerticalAlignment="Top" Width="120" Height="23"  Margin="10" HorizontalAlignment="Left"/>
                 <Label Content="邮政地址：" HorizontalAlignment="Right" VerticalAlignment="Center" />
                 <TextBox  Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"  Margin="10" HorizontalAlignment="Left"/>
+                <Label Content="用户类型：" HorizontalAlignment="Right" VerticalAlignment="Center" />
+                <RadioButton Content="考生" VerticalAlignment="Center" IsChecked="True" ></RadioButton>
             </UniformGrid>
             <StackPanel Height="30" Orientation="Horizontal"  HorizontalAlignment="Center"  >
                 <Button Content="注册" Width="75" Margin="12,0,12,0" Click="Button_Click" />
