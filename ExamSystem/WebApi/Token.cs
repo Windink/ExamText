@@ -13,6 +13,8 @@ namespace ExamSystem.WebApi
     {
         public string login_Token;
 
+        public string login_Id;
+
         public user us;
 
         public async Task<string> GetToken(user us)
@@ -25,7 +27,7 @@ namespace ExamSystem.WebApi
 
                 input.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json") { CharSet = "utf-8" };
 
-                var result =await client.PostAsync(uri.baseUrl + uri.loginToken, input);
+                var result =await client.PostAsync(uri.BaseUrl + uri.loginToken, input);
 
                 string str = await result.Content.ReadAsStringAsync();
                
@@ -35,7 +37,9 @@ namespace ExamSystem.WebApi
                 {
                     return js["error"]["message"].ToString();
                 }
+
                 login_Token = js["result"]["accessToken"].ToString();
+                login_Id = js["result"]["userId"].ToString();
                 this.us = us;
                 return login_Token;
             }

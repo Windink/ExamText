@@ -51,10 +51,13 @@ namespace ExamSystem
             us.UsernameOrEmailAddress = UserID.Text;
             us.Password = UserPassword.Password;
             string re = await login_token.GetToken(us);
-            if(login_token.login_Token == null)
-                MessageBox.Show(re); 
+            if (login_token.login_Token == null)
+                MessageBox.Show(re);
             else
-                MessageBox.Show("登录成功");
+            {
+                MessageBox.Show("登录成功"); 
+                //Text();
+            }
         }
 
         /// <summary>
@@ -74,8 +77,29 @@ namespace ExamSystem
         {
 
         }
+        /// <summary>
+        /// GetAll测试
+        /// </summary>
+        public async void Text()
+        {
+            using(var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Authorization", "Bearer " + login_token.login_Token);
+                var result =await client.GetAsync(uri.BaseUrl + "/api/services/app/User/GetAll");
 
- 
+                string st =await result.Content.ReadAsStringAsync();
+
+                JToken s = JToken.Parse(st);
+
+                List<JToken> a = s["result"]["items"].ToList<JToken>();
+
+               foreach(var i in a)
+                {
+                    MessageBox.Show(i.ToString());
+                }
+
+            }
+        }
 
 
 

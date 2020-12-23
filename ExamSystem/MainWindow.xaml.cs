@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamSystem.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,13 @@ namespace ExamSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+       
+
+
         public MainWindow()
         {
             InitializeComponent();
-            this.Content = new Login();
+            this.Content = new Users();
         }
     }
 }

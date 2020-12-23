@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamSystem.WebApi.entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,14 @@ namespace ExamSystem.WebApi.Common_Interface
 {
     public interface Operation
     {
-        Task<int> CreateRequest();
+        Task<string> CreateRequest(Uri uri,IResult input);
 
-        Task<int> UpdateRequest();
+        Task<string> UpdateRequest(Uri uri,IResult input);
 
-        Task<int> DeleteRequest();
+        Task<string> DeleteRequest(Uri uri, entity<long> input);
 
-        Task<int> GetRequest();
+        Task<Dictionary<string,string>> GetRequest(Uri uri, entity<long> input);
+
+        //Task<>
     }
 }

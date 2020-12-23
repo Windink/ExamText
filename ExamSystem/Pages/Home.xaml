@@ -10,6 +10,36 @@
 
     <Grid>
         <Label Content="哈哈哈" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <DockPanel >
+            <DockPanel DockPanel.Dock="Top" HorizontalAlignment="Stretch"  VerticalAlignment="Top" Background="AliceBlue"  >
+                <Label Content="考试系统" FontSize="20" FontWeight="Black" Foreground="SandyBrown"/>
+                <ComboBox Height="36" Width="30" HorizontalAlignment="Right" BorderBrush="AntiqueWhite" />
+            </DockPanel>
+                <DockPanel DockPanel.Dock="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="Bisque"  >
+                    <ListBox Width="100">
+                        <ListBoxItem Margin="0,0,0,5">考生</ListBoxItem>
+                        <ListBoxItem Margin="0,0,0,5">用户</ListBoxItem>
+                        <ListBoxItem Margin="0,0,0,5">角色</ListBoxItem>
+                        <ListBoxItem Margin="0,0,0,5">考试管理</ListBoxItem>
+                    </ListBox >
+                </DockPanel>
+            <DockPanel  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch"   >
+                <TabControl >
+                    <TabItem Header="TabItem">
+                        <Grid Background="#FFE5E5E5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="81*"/>
+                                <ColumnDefinition Width="593*"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="TabItem">
+                        <Grid Background="#FFE5E5E5"/>
+                    </TabItem>
+                </TabControl>
+
+            </DockPanel>
+        </DockPanel>
 
     </Grid>
 </Page>
