@@ -43,7 +43,7 @@ namespace ExamSystem.WebApi
             return input;
         }
 
-        public async Task<string> CreateRequest(Uri uri, IResult input)
+        public async Task<string> CreateRequest(string uri, IResult input)
         {
             using(client)
             {
@@ -57,7 +57,7 @@ namespace ExamSystem.WebApi
             }
         }
 
-        public async Task<string> DeleteRequest(Uri uri, entity<long> input)
+        public async Task<string> DeleteRequest(string uri, entity<long> input)
         {
             using(client)
             {
@@ -70,7 +70,7 @@ namespace ExamSystem.WebApi
             
         }
 
-        public async Task<Dictionary<string,string>> GetRequest(Uri uri, entity<long> input)
+        public async Task<Dictionary<string,string>> GetRequest(string uri, entity<long> input)
         {
             using(client)
             {
@@ -83,7 +83,7 @@ namespace ExamSystem.WebApi
             }
         }
 
-        public async Task<string> UpdateRequest(Uri uri, IResult input)
+        public async Task<string> UpdateRequest(string uri, IResult input)
         {
             using(client)
             {
@@ -106,15 +106,16 @@ namespace ExamSystem.WebApi
             return js;
         }
 
+        public async Task<List<JToken>> GetAllRequest(string uri)
+        {
+            using(client)
+            {
+                var result = await client.GetAsync(uri);
+                JToken re = await Getsuccess(result);
+                List<JToken> users = re["result"]["items"].ToList<JToken>();
 
-
-
-
-
-
-
-
-
-
+                return users;
+            }
+        }
     }
 }

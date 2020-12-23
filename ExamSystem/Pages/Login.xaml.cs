@@ -1,5 +1,6 @@
 ﻿using Abp;
 using Abp.WebApi.Client;
+using ExamSystem.Pages;
 using ExamSystem.WebApi;
 using ExamSystem.WebApi.entities;
 using Newtonsoft.Json;
@@ -29,7 +30,7 @@ namespace ExamSystem
     /// </summary>
     public partial class Login : Page
     {
-        public Token login_token; // 登录Token
+        private Token login_token; // 登录Token
       
 
 
@@ -55,7 +56,8 @@ namespace ExamSystem
                 MessageBox.Show(re);
             else
             {
-                MessageBox.Show("登录成功"); 
+                Application.Current.MainWindow.Content = new Users(login_token);
+                //MessageBox.Show("登录成功"); 
                 //Text();
             }
         }

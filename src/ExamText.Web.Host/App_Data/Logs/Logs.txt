@@ -17569,3 +17569,131 @@ INFO  2020-12-23 16:50:50,446 [111  ] .Mvc.Infrastructure.ObjectResultExecutor -
 INFO  2020-12-23 16:50:50,446 [111  ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Users.UserAppService.GetAllAsync (ExamText.Application) in 19.3553ms
 INFO  2020-12-23 16:50:50,446 [111  ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Users.UserAppService.GetAllAsync (ExamText.Application)'
 INFO  2020-12-23 16:50:50,446 [111  ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 22.3938ms 200 application/json; charset=utf-8
+DEBUG 2020-12-23 19:52:05,970 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2020-12-23 19:52:06,002 [1    ] Abp.Modules.AbpModuleManager             - Found 15 ABP modules in total.
+DEBUG 2020-12-23 19:52:06,025 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.Web.Host.Startup.ExamTextWebHostModule, ExamText.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextWebCoreModule, ExamText.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextApplicationModule, ExamText.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,027 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.ExamTextCoreModule, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,028 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ExamText.EntityFrameworkCore.ExamTextEntityFrameworkModule, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,029 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,030 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=5.13.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,032 [1    ] Abp.Modules.AbpModuleManager             - 15 modules loaded.
+DEBUG 2020-12-23 19:52:06,108 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-23 19:52:06,108 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-23 19:52:06,108 [1    ] o.Configuration.LanguageManagementConfig - Converted ExamText (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-23 19:52:06,108 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2020-12-23 19:52:06,400 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: ExamText.EntityFrameworkCore.ExamTextDbContext, ExamText.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2020-12-23 19:52:06,743 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2020-12-23 19:52:06,817 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2020-12-23 19:52:06,859 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2020-12-23 19:52:06,876 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ExamText
+DEBUG 2020-12-23 19:52:06,904 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2020-12-23 19:52:06,943 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Castle.Proxies.BackgroundJobManagerProxy
+DEBUG 2020-12-23 19:52:06,963 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[ExamText.MultiTenancy.Tenant, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[ExamText.Authorization.Users.User, ExamText.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+DEBUG 2020-12-23 19:52:07,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 11 classes define auto mapping attributes
+DEBUG 2020-12-23 19:52:07,002 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2020-12-23 19:52:07,007 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.CreateUserDto
+DEBUG 2020-12-23 19:52:07,007 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Users.Dto.UserDto
+DEBUG 2020-12-23 19:52:07,007 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2020-12-23 19:52:07,007 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Sessions.Dto.UserLoginInfoDto
+DEBUG 2020-12-23 19:52:07,007 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Roles.Dto.PermissionDto
+DEBUG 2020-12-23 19:52:07,008 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2020-12-23 19:52:07,008 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.MultiTenancy.Dto.TenantDto
+DEBUG 2020-12-23 19:52:07,008 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamQuestions.Dto.ExamQuestionDto
+DEBUG 2020-12-23 19:52:07,008 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.Examinees.Dto.ExamineeDto
+DEBUG 2020-12-23 19:52:07,008 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ExamText.ExamCompletions.Dto.ExamCompletionDto
+INFO  2020-12-23 19:52:09,160 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,zh-Hans,ja
+INFO  2020-12-23 19:52:09,356 [1    ] taProtection.KeyManagement.XmlKeyManager - User profile is available. Using 'C:\Users\LEGION\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+INFO  2020-12-23 19:52:09,402 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/  
+INFO  2020-12-23 19:52:09,467 [14   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-23 19:52:10,243 [14   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ExamText.Web.Host.Controllers.HomeController (ExamText.Web.Host).
+INFO  2020-12-23 19:52:10,780 [12   ] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2020-12-23 19:52:10,783 [12   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host) in 537.2476ms
+INFO  2020-12-23 19:52:10,784 [12   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.HomeController.Index (ExamText.Web.Host)'
+INFO  2020-12-23 19:52:10,794 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 1392.3785ms 302 
+INFO  2020-12-23 19:52:10,799 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/index.html  
+INFO  2020-12-23 19:52:10,840 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 40.7474ms 200 text/html;charset=utf-8
+INFO  2020-12-23 19:52:10,860 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.js  
+INFO  2020-12-23 19:52:10,861 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/ui/abp.swagger.js  
+INFO  2020-12-23 19:52:10,865 [14   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.swagger.js was not modified
+INFO  2020-12-23 19:52:10,865 [12   ] NetCore.StaticFiles.StaticFileMiddleware - The file /swagger/ui/abp.js was not modified
+INFO  2020-12-23 19:52:10,866 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 6.0317ms 304 application/javascript
+INFO  2020-12-23 19:52:10,866 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 4.36ms 304 application/javascript
+INFO  2020-12-23 19:52:10,947 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/AntiForgery/SetCookie  
+INFO  2020-12-23 19:52:10,981 [12   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/swagger/v1/swagger.json  
+INFO  2020-12-23 19:52:11,090 [14   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-23 19:52:11,090 [12   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-23 19:52:11,139 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-23 19:52:11,144 [11   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller ExamText.Web.Host.Controllers.AntiForgeryController (ExamText.Web.Host).
+INFO  2020-12-23 19:52:11,157 [11   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 19:52:11,186 [11   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host) in 41.3099ms
+INFO  2020-12-23 19:52:11,186 [11   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Web.Host.Controllers.AntiForgeryController.SetCookie (ExamText.Web.Host)'
+INFO  2020-12-23 19:52:11,186 [11   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 238.7465ms 200 application/json; charset=utf-8
+INFO  2020-12-23 19:52:11,250 [14   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 268.7759ms 200 application/json;charset=utf-8
+INFO  2020-12-23 20:22:59,700 [64   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate Application/json; charset=utf-8 54
+INFO  2020-12-23 20:22:59,702 [64   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:22:59,716 [64   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+INFO  2020-12-23 20:23:00,610 [65   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:23:00,613 [65   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 896.4463ms
+INFO  2020-12-23 20:23:00,613 [65   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:23:00,613 [65   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 913.3242ms 200 application/json; charset=utf-8
+INFO  2020-12-23 20:23:44,378 [70   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate Application/json; charset=utf-8 54
+INFO  2020-12-23 20:23:44,382 [70   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:23:44,385 [70   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+INFO  2020-12-23 20:23:44,427 [73   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:23:44,428 [73   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 41.9776ms
+INFO  2020-12-23 20:23:44,428 [73   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:23:44,428 [73   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 49.7962ms 200 application/json; charset=utf-8
+INFO  2020-12-23 20:23:44,469 [73   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll  
+INFO  2020-12-23 20:23:44,471 [73   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-23 20:23:44,476 [73   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Users.UserAppService.GetAllAsync (ExamText.Application)'
+INFO  2020-12-23 20:23:44,482 [73   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[ExamText.Users.Dto.UserDto]] GetAllAsync(ExamText.Users.Dto.PagedUserResultRequestDto) on controller ExamText.Users.UserAppService (ExamText.Application).
+INFO  2020-12-23 20:23:44,871 [72   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:23:44,883 [72   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Users.UserAppService.GetAllAsync (ExamText.Application) in 400.7171ms
+INFO  2020-12-23 20:23:44,883 [72   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Users.UserAppService.GetAllAsync (ExamText.Application)'
+INFO  2020-12-23 20:23:44,883 [72   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 414.5518ms 200 application/json; charset=utf-8
+INFO  2020-12-23 20:24:39,887 [76   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate Application/json; charset=utf-8 50
+INFO  2020-12-23 20:24:39,888 [76   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:24:39,892 [76   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+WARN  2020-12-23 20:24:39,909 [76   ] icrosoft.AspNetCore.Identity.UserManager - Invalid password for user 1.
+WARN  2020-12-23 20:24:40,725 [77   ] Mvc.ExceptionHandling.AbpExceptionFilter - Login failed!
+Abp.UI.UserFriendlyException: Login failed!
+   at ExamText.Controllers.TokenAuthController.GetLoginResultAsync(String usernameOrEmailAddress, String password, String tenancyName) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Web.Core\Controllers\TokenAuthController.cs:line 192
+   at ExamText.Controllers.TokenAuthController.Authenticate(AuthenticateModel model) in D:\Windink Pro\5.8.1\aspnet-core\src\ExamText.Web.Core\Controllers\TokenAuthController.cs:line 55
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+INFO  2020-12-23 20:24:40,730 [77   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:24:40,732 [77   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 839.755ms
+INFO  2020-12-23 20:24:40,732 [77   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:24:40,733 [77   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 845.9743ms 500 application/json; charset=utf-8
+INFO  2020-12-23 20:24:45,429 [65   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 POST http://localhost:21021/api/TokenAuth/Authenticate Application/json; charset=utf-8 54
+INFO  2020-12-23 20:24:45,431 [65   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:24:45,435 [65   ] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Authenticate", controller = "TokenAuth", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[ExamText.Models.TokenAuth.AuthenticateResultModel] Authenticate(ExamText.Models.TokenAuth.AuthenticateModel) on controller ExamText.Controllers.TokenAuthController (ExamText.Web.Core).
+INFO  2020-12-23 20:24:45,699 [65   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:24:45,700 [65   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core) in 264.5903ms
+INFO  2020-12-23 20:24:45,700 [65   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Controllers.TokenAuthController.Authenticate (ExamText.Web.Core)'
+INFO  2020-12-23 20:24:45,700 [65   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 271.6707ms 200 application/json; charset=utf-8
+INFO  2020-12-23 20:24:45,714 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/1.1 GET http://localhost:21021/api/services/app/User/GetAll  
+INFO  2020-12-23 20:24:45,718 [79   ] uthentication.JwtBearer.JwtBearerHandler - Successfully validated the token.
+INFO  2020-12-23 20:24:45,719 [79   ] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'ExamText.Users.UserAppService.GetAllAsync (ExamText.Application)'
+INFO  2020-12-23 20:24:45,723 [79   ] c.Infrastructure.ControllerActionInvoker - Route matched with {area = "app", action = "GetAll", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Abp.Application.Services.Dto.PagedResultDto`1[ExamText.Users.Dto.UserDto]] GetAllAsync(ExamText.Users.Dto.PagedUserResultRequestDto) on controller ExamText.Users.UserAppService (ExamText.Application).
+INFO  2020-12-23 20:24:45,747 [79   ] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2020-12-23 20:24:45,747 [79   ] c.Infrastructure.ControllerActionInvoker - Executed action ExamText.Users.UserAppService.GetAllAsync (ExamText.Application) in 24.0188ms
+INFO  2020-12-23 20:24:45,748 [79   ] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'ExamText.Users.UserAppService.GetAllAsync (ExamText.Application)'
+INFO  2020-12-23 20:24:45,748 [79   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished in 33.8349ms 200 application/json; charset=utf-8

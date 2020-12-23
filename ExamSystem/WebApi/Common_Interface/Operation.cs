@@ -1,4 +1,5 @@
 ﻿using ExamSystem.WebApi.entities;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +10,14 @@ namespace ExamSystem.WebApi.Common_Interface
 {
     public interface Operation
     {
-        Task<string> CreateRequest(Uri uri,IResult input);
+        Task<string> CreateRequest(string uri,IResult input);
 
-        Task<string> UpdateRequest(Uri uri,IResult input);
+        Task<string> UpdateRequest(string uri,IResult input);
 
-        Task<string> DeleteRequest(Uri uri, entity<long> input);
+        Task<string> DeleteRequest(string uri, entity<long> input);
 
-        Task<Dictionary<string,string>> GetRequest(Uri uri, entity<long> input);
+        Task<Dictionary<string,string>> GetRequest(string uri, entity<long> input);
 
-        //Task<>
+        Task<List<JToken>> GetAllRequest(string uri);
     }
 }

@@ -27,7 +27,7 @@ namespace ExamSystem
         public MainWindow()
         {
             InitializeComponent();
-            this.Content = new Users();
+            this.Content = new Login();
         }
     }
 }
