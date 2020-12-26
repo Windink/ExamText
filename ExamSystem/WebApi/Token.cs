@@ -27,7 +27,7 @@ namespace ExamSystem.WebApi
 
                 input.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json") { CharSet = "utf-8" };
 
-                var result =await client.PostAsync(uri.BaseUrl + uri.loginToken, input);
+                var result =await client.PostAsync(Uris.BaseUrl + Uris.loginToken, input);
 
                 string str = await result.Content.ReadAsStringAsync();
                

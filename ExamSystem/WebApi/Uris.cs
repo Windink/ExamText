@@ -5,7 +5,7 @@ using Abp.Authorization;
 
 namespace ExamSystem.WebApi
 {
-    public class uri
+    public class Uris
     {
         public const string BaseUrl = "http://localhost:21021";  //服务器地址
 

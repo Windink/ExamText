@@ -12,11 +12,11 @@ using System.Threading.Tasks;
 namespace ExamSystem.WebApi
 {
     /// <summary>
-    /// 用户
+    /// 公用类
     /// </summary>
     public class UserWebRequest : Operation
     {
-        private HttpClient client;
+        public HttpClient client;
        // private string login_Token { get ; set ;}
        // private StringContent input;
 
@@ -43,10 +43,9 @@ namespace ExamSystem.WebApi
             return input;
         }
 
-        public async Task<string> CreateRequest(string uri, IResult input)
+        public virtual async Task<string> CreateRequest(string uri, IResult input)
         {
-            using(client)
-            {
+          
                 var inp = GetJson(input);
                 var result =await client.PostAsync(uri, inp);
                 if(result.IsSuccessStatusCode == false)
@@ -54,36 +53,45 @@ namespace ExamSystem.WebApi
                 else
                 { return result.StatusCode.ToString(); }
                 
-            }
+        
         }
-
-        public async Task<string> DeleteRequest(string uri, entity<long> input)
+       
+        public virtual async Task<string> DeleteRequest(string uri, entity<long> input)
         {
-            using(client)
-            {
-                var result = await client.DeleteAsync(uri + "?Id=" + input.id  );
-                if (result.IsSuccessStatusCode == false)
+            //var result = await client.DeleteAsync(uri + "?Id=" + input.id.ToString()  );
+            //var inp = new FormUrlEncodedContent(new Dictionary<string, string>{
+            //    { "Id" ,"10" }  
+            //});
+            //var httpRequestMessage = new HttpRequestMessage()
+            //{
+            //    Method = HttpMethod.Delete,
+            //    RequestUri = new Uri(uri),
+            //    Content = inp
+            //};
+                string uris = uri + "?Id=" + input.id;
+                var result = await client.DeleteAsync(uris);
+                if (!result.IsSuccessStatusCode)
                 { return "请求失败，查看是否用于权限"; }
                 else
                 { return result.StatusCode.ToString(); }
-            }
+       
             
         }
 
-        public async Task<Dictionary<string,string>> GetRequest(string uri, entity<long> input)
+        public virtual async Task<JToken> GetRequest(string uri, entity<long> input)
         {
-            using(client)
-            {
+            
                 var result = await client.GetAsync(uri + "?Id=" + input.id );
-                if(result.IsSuccessStatusCode ==false)
-                { return new Dictionary<string, string>(); }
-
-                JToken re =await Getsuccess(result);
-                return re["result"].ToDictionary(k=>k.ToString(),v=>v.ToString());    
-            }
+                JToken re = await Getsuccess(result);
+                if (result.IsSuccessStatusCode ==false)
+                { return re["error"]; }
+               
+               
+                return re["result"];  
+ 
         }
 
-        public async Task<string> UpdateRequest(string uri, IResult input)
+        public virtual async Task<string> UpdateRequest(string uri, IResult input)
         {
             using(client)
             {
@@ -96,7 +104,7 @@ namespace ExamSystem.WebApi
             }
         }
 
-        public async Task<JToken> Getsuccess(HttpResponseMessage result)
+        public  async Task<JToken> Getsuccess(HttpResponseMessage result)
         {
             string str = await result.Content.ReadAsStringAsync();
 
@@ -106,16 +114,15 @@ namespace ExamSystem.WebApi
             return js;
         }
 
-        public async Task<List<JToken>> GetAllRequest(string uri)
+        public virtual async Task<List<JToken>> GetAllRequest(string uri)
         {
-            using(client)
-            {
+           
                 var result = await client.GetAsync(uri);
                 JToken re = await Getsuccess(result);
                 List<JToken> users = re["result"]["items"].ToList<JToken>();
 
                 return users;
-            }
+       
         }
     }
 }

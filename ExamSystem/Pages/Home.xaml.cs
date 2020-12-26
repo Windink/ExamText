@@ -1,4 +1,7 @@
-﻿using System;
+﻿using ExamSystem.WebApi;
+using ExamSystem.WebApi.Server;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -10,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ExamSystem.WebApi.entities;
+using ExamSystem.CustomControl;
 
 namespace ExamSystem.Pages
 {
@@ -18,9 +23,64 @@ namespace ExamSystem.Pages
     /// </summary>
     public partial class Home : Page
     {
-        public Home()
+        private Token login_token;
+        private UserServer userRequest;
+        private List<JToken> users;
+
+        public Home(Token token)
         {
             InitializeComponent();
+            login_token = token;
+            userRequest = new UserServer(token.login_Token);
+            Initialze();
         }
+
+        public async void Initialze()
+        {
+            //foreach(v) 
+            //{
+            //    item.
+            //} 
+            string uri = Uris.BaseUrl + Uris.User + "Get";
+            var result =await userRequest.GetUserRokes(uri, new entity<long>() { id = int.Parse(login_token.login_Id) });
+            //
+           
+        
+        }
+
+        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            ListBoxItem listBoxItem = sender as ListBoxItem;
+           
+            string liteName = listBoxItem.Content.ToString();
+            foreach (TabItem item in tabControl.Items)
+            {
+                if (item.Name.Equals(liteName))
+                {
+                    return;
+                }
+            }
+            CloseTabControl tabItem = new CloseTabControl();
+            tabItem.Title = liteName;
+            tabItem.Name = liteName;
+            Frame frame = new Frame();
+            if(liteName.Equals("考生"))
+            {
+                frame.Content = new Users(login_token);
+            }
+            else if(liteName.Equals("用户"))
+            {
+                frame.Content = new Roles();
+            }
+            else
+            {
+                MessageBox.Show(liteName);
+                return;
+            }
+            tabItem.Content = frame;
+            tabControl.Items.Add(tabItem);
+            tabItem.IsSelected = true;
+        }
+
     }
 }

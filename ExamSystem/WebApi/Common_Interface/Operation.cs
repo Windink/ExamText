@@ -16,7 +16,7 @@ namespace ExamSystem.WebApi.Common_Interface
 
         Task<string> DeleteRequest(string uri, entity<long> input);
 
-        Task<Dictionary<string,string>> GetRequest(string uri, entity<long> input);
+        Task<JToken> GetRequest(string uri, entity<long> input);
 
         Task<List<JToken>> GetAllRequest(string uri);
     }
