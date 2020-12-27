@@ -14,11 +14,10 @@ namespace ExamText.Examinees.Dto
     //[AutoMapTo(typeof(Examinee))]
     public class CreateExamineeDto
     {
-        public long Id { get; set; }
 
         public DateTime CreationTime { get; set; }
         [Required]
-        public Bitmap Picture { get; set; }
+        public String Picture { get; set; }
 
         public TaskState State { get; set; }
         [Required]

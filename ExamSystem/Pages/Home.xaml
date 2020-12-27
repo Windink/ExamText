@@ -17,7 +17,7 @@
             </DockPanel>
                 <DockPanel DockPanel.Dock="Left" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Background="Bisque"  >
                     <ListBox Width="100" Name="listitemsbox">
-                        <ListBoxItem Margin="0,0,0,5" Content="考生" Selected="ListBoxItem_Selected"></ListBoxItem>
+                      
                         <ListBoxItem Margin="0,0,0,5" Content="用户" Selected="ListBoxItem_Selected"></ListBoxItem>
                     <ListBoxItem Margin="0,0,0,5" Content="角色" Selected="ListBoxItem_Selected"></ListBoxItem>
                     <ListBoxItem Margin="0,0,0,5" Content="考试管理" Selected="ListBoxItem_Selected"></ListBoxItem>

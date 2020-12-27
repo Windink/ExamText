@@ -52,7 +52,7 @@ namespace ExamText.Users
             _logInManager = logInManager;
         }
 
-        //[AbpAuthorize(PermissionNames.Pages_Users_Create)]
+        [AbpAuthorize(PermissionNames.Pages_Users_Create)]
         public override async Task<UserDto> CreateAsync(CreateUserDto input)
         {
             CheckCreatePermission();
@@ -239,6 +239,16 @@ namespace ExamText.Users
             }
 
             return true;
+        }
+
+        public async Task<UserDto> CreateExaminee(CreateExaimeeDto input)
+        {
+            var user = ObjectMapper.Map<User>(input);
+
+            CheckErrors(await _userManager.CreateAsync(user, input.Password));
+            CurrentUnitOfWork.SaveChanges();
+
+            return MapToEntityDto(user);
         }
     }
 }

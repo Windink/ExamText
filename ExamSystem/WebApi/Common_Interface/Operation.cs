@@ -10,7 +10,7 @@ namespace ExamSystem.WebApi.Common_Interface
 {
     public interface Operation
     {
-        Task<string> CreateRequest(string uri,IResult input);
+        Task<JToken> CreateRequest(string uri,IResult input);
 
         Task<string> UpdateRequest(string uri,IResult input);
 

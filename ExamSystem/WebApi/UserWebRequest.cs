@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace ExamSystem.WebApi
 {
     /// <summary>
-    /// 公用类
+    /// 公用HttpClient类
     /// </summary>
     public class UserWebRequest : Operation
     {
@@ -43,17 +43,20 @@ namespace ExamSystem.WebApi
             return input;
         }
 
-        public virtual async Task<string> CreateRequest(string uri, IResult input)
+        public virtual async Task<JToken> CreateRequest(string uri, IResult input)
         {
           
                 var inp = GetJson(input);
                 var result =await client.PostAsync(uri, inp);
-                if(result.IsSuccessStatusCode == false)
-                { return "请求失败，查看是否用于权限"; }
-                else
-                { return result.StatusCode.ToString(); }
-                
-        
+                JToken re = await Getsuccess(result);
+
+                return re;
+                //if (result.IsSuccessStatusCode == false)
+                //{ return re["error"]["message"].ToString(); }
+                // else
+                //{ return result.StatusCode.ToString(); }
+
+
         }
        
         public virtual async Task<string> DeleteRequest(string uri, entity<long> input)
@@ -80,28 +83,39 @@ namespace ExamSystem.WebApi
 
         public virtual async Task<JToken> GetRequest(string uri, entity<long> input)
         {
-            
                 var result = await client.GetAsync(uri + "?Id=" + input.id );
                 JToken re = await Getsuccess(result);
                 if (result.IsSuccessStatusCode ==false)
                 { return re["error"]; }
-               
-               
                 return re["result"];  
  
         }
 
+        public virtual async Task<JToken> GetRequest(string uri)
+        {
+            var result = await client.GetAsync(uri);
+            JToken re = await Getsuccess(result);
+            if (result.IsSuccessStatusCode == false)
+            { return re["error"]; }
+            return re["result"];
+
+        }
+
+
         public virtual async Task<string> UpdateRequest(string uri, IResult input)
         {
-            using(client)
-            {
+            
                 var inp = GetJson(input);
+
                 var result = await client.PutAsync(uri, inp);
+
+                JToken re =await Getsuccess(result);
+
                 if (result.IsSuccessStatusCode == false)
-                { return "请求失败，查看是否用于权限"; }
+                { return re["error"]["message"].ToString(); }
                 else
                 { return result.StatusCode.ToString(); }
-            }
+         
         }
 
         public  async Task<JToken> Getsuccess(HttpResponseMessage result)

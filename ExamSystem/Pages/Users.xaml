@@ -13,12 +13,13 @@
             <RowDefinition Height="23*"/>
             <RowDefinition Height="427*"/>
         </Grid.RowDefinitions>
-        <Button Grid.Row="0" Content="创建用户" VerticalAlignment="Top" HorizontalAlignment="Left" Background="AliceBlue"></Button>
+        <Button Grid.Row="0" Content="创建用户" VerticalAlignment="Top" HorizontalAlignment="Left" Background="AliceBlue" Click="Create_Click"></Button>
         <ListView x:Name="listView" Grid.Row="1"   >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="用户ID" Width="100" DisplayMemberBinding="{Binding ID}" ></GridViewColumn>
-                    <GridViewColumn  Header="名字" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn  Header="用户ID" Width="100" DisplayMemberBinding="{Binding ID}" ></GridViewColumn>
+                    <GridViewColumn  Header="用户名字" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn  Header="姓名" Width="100" DisplayMemberBinding="{Binding fullName}"></GridViewColumn>
                     <GridViewColumn Header="建立的时间" Width="auto" DisplayMemberBinding="{Binding CreatTime}"></GridViewColumn>
                     <GridViewColumn Header=" " Width="60">
                         <GridViewColumn.CellTemplate>

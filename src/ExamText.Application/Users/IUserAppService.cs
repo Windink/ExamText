@@ -13,5 +13,7 @@ namespace ExamText.Users
         Task ChangeLanguage(ChangeUserLanguageDto input);
 
         Task<bool> ChangePassword(ChangePasswordDto input);
+
+        Task<UserDto> CreateExaminee(CreateExaimeeDto input);
     }
 }

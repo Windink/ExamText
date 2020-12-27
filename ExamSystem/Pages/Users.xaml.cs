@@ -4,6 +4,7 @@ using ExamSystem.WebApi.Server;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Net;
 using System.Text;
@@ -27,9 +28,9 @@ namespace ExamSystem.Pages
     /// </summary>
     public partial class Users : Page
     {
-        private UserServer userRequest;
+        private readonly UserServer userRequest;
         private List<JToken> users;
-        private Token token;
+        private readonly Token token;
 
         public Users(Token token)
         {
@@ -46,7 +47,22 @@ namespace ExamSystem.Pages
         /// <param name="e"></param>
         private void Updata_Click(object sender, RoutedEventArgs e)
         {
-
+            Button button = sender as Button;
+            Frame frame = new Frame();
+            frame.Content = new UpdateUserPage(token,button.Tag.ToString());
+            this.Content = frame;
+        }
+        
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Create_Click(object sender, RoutedEventArgs e)
+        {
+            Frame frame = new Frame();
+            frame.Content = new CreateUserPage(token);
+            this.Content = frame;
         }
 
         /// <summary>
@@ -87,14 +103,18 @@ namespace ExamSystem.Pages
         /// <returns></returns>
         public async void InitializeView()
         {
+          
             listView.Items.Clear();
             this.users = await userRequest.GetAllRequest(Uris.BaseUrl + Uris.User + "GetAll");
             foreach(var item in this.users)
             {
-                var it = new { ID = item["id"],Name = item["name"], CreatTime = item["creationTime"] };
+                var it = new { ID = item["id"],Name = item["name"], CreatTime = item["creationTime"],fullName = item["fullName"] };
                 listView.Items.Add(it);
             }
-
+            listView.Items.SortDescriptions.Add(new SortDescription("ID", ListSortDirection.Ascending));
         }
+
+       
+            
     }
 }

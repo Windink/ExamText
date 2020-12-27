@@ -1,5 +1,4 @@
 ﻿using Abp;
-using Abp.WebApi.Client;
 using ExamSystem.Pages;
 using ExamSystem.WebApi;
 using ExamSystem.WebApi.entities;
@@ -59,7 +58,9 @@ namespace ExamSystem
             //us.Password = UserPassword.Password;
             us.UsernameOrEmailAddress = "admin";
             us.Password = "123qwe";
+            try { 
             string re = await login_token.GetToken(us);
+          
             if (login_token.login_Token == null)
                 MessageBox.Show(re);
             else
@@ -67,6 +68,11 @@ namespace ExamSystem
                 Application.Current.MainWindow.Content = new Home(login_token);
                 //MessageBox.Show("登录成功"); 
                 //Text();
+            }  
+            }
+           catch (HttpRequestException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

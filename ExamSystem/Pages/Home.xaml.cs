@@ -34,7 +34,9 @@ namespace ExamSystem.Pages
             userRequest = new UserServer(token.login_Token);
             Initialze();
         }
-
+        /// <summary>
+        /// 初始权限显示设置
+        /// </summary>
         public async void Initialze()
         {
             //foreach(v) 
@@ -64,11 +66,11 @@ namespace ExamSystem.Pages
             tabItem.Title = liteName;
             tabItem.Name = liteName;
             Frame frame = new Frame();
-            if(liteName.Equals("考生"))
+            if(liteName.Equals("用户"))
             {
                 frame.Content = new Users(login_token);
             }
-            else if(liteName.Equals("用户"))
+            else if(liteName.Equals("角色"))
             {
                 frame.Content = new Roles();
             }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Threading.Tasks;
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
@@ -40,9 +41,11 @@ namespace ExamText.Examinees
 
             var user = await _userRepository.GetAsync(input.UserID);
 
-           
+            Byte[] b = Convert.FromBase64String(input.Picture);
 
-            Bitmap bitmap = input.Picture;          
+            MemoryStream pi = new MemoryStream(b);
+
+            Bitmap bitmap = new Bitmap(pi);
 
             string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + user.Name + ".jpg";
 
@@ -50,78 +53,72 @@ namespace ExamText.Examinees
 
             Examinee examinee = new Examinee()
             {
-                Id = input.Id,
                 PicturePath = filename,
-               UserID = input.UserID
-                
+                UserID = input.UserID
             };
 
             //user.examinee = examinee;
             //var examinee = ObjectMapper.Map<Examinee>(input);
+            await pi.DisposeAsync();
 
             await _examineeRepository.InsertAsync(examinee);
 
             return  MapToEntityDto(examinee);
         }
 
-        /// <summary>
-        /// 只可以get得到自己
-        /// </summary>
-        /// <returns></returns>
-        /// 
-        public override async Task<ExamineeDto> GetAsync(EntityDto<long> input)
-        {
-            CheckGetPermission();
-            return await GetAsync(input);
-        }
+        ///// <summary>
+        ///// 只可以get得到自己
+        ///// </summary>
+        ///// <returns></returns>
+        ///// 
+        //public override async Task<ExamineeDto> GetAsync(EntityDto<long> input)
+        //{
+        //    CheckGetPermission();
+        //    return await GetAsync(input);
+        //}
 
-        /// <summary>
-        /// 不需要删除权限
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public override Task DeleteAsync(EntityDto<long> input)
-        {
-            CheckCreatePermission();
-            return null;
-        }
+        ///// <summary>
+        ///// 不需要删除权限
+        ///// </summary>
+        ///// <param name="input"></param>
+        ///// <returns></returns>
+        //public override Task DeleteAsync(EntityDto<long> input)
+        //{
+        //    CheckCreatePermission();
+        //    return null;
+        //}
 
-        /// <summary>
-        /// 不需要getAll权限
-        /// </summary>
-        /// <param name="identityResult"></param>
-        public override Task<PagedResultDto<ExamineeDto>> GetAllAsync(PagedExamineeResultRequestDto input)
-        {
-            CheckGetAllPermission();
-            return null;
-        }
+        ///// <summary>
+        ///// 不需要getAll权限
+        ///// </summary>
+        ///// <param name="identityResult"></param>
+        //public override Task<PagedResultDto<ExamineeDto>> GetAllAsync(PagedExamineeResultRequestDto input)
+        //{
+        //    CheckGetAllPermission();
+        //    return null;
+        //}
 
-        /// <summary>
-        /// 只可以改变自己的Picture
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public override async Task<ExamineeDto> UpdateAsync(UpdateExamineePictureDto input)
-        {
+        ///// <summary>
+        ///// 只可以改变自己的Picture
+        ///// </summary>
+        ///// <param name="input"></param>
+        ///// <returns></returns>
+        //public override async Task<ExamineeDto> UpdateAsync(UpdateExamineePictureDto input)
+        //{
 
-            CheckUpdatePermission();
-            var examinee = _examineeRepository.Get(input.Id);
+        //    CheckUpdatePermission();
+        //    var examinee = _examineeRepository.Get(input.Id);
 
-            var user = _userRepository.Get(input.Id);
+        //    var user = _userRepository.Get(input.Id);
 
-            Bitmap bitmap = input.Picture;
+        //    Bitmap bitmap = input.Picture;
 
-            string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + user.Name + ".jpg";
+        //    string filename = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\data\\Face\\" + user.Name + ".jpg";
 
-            bitmap.Save(filename);
+        //    bitmap.Save(filename);
 
-            return await UpdateAsync(input);
-        }
-
-        protected virtual void CheckErrors(IdentityResult identityResult)
-        {
-            identityResult.CheckErrors(LocalizationManager);
-        }
+        //    return await UpdateAsync(input);
+        //}
 
         public async Task<int> GetExamineesCount()
         {

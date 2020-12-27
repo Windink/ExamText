@@ -17,5 +17,7 @@ namespace ExamSystem.WebApi
 
         public const string Role = "/api/services/app/Role/"; // 角色
 
+        public const string Examinee = "/api/services/app/Examinee/"; // 用户考生照片类
+
     }
 }

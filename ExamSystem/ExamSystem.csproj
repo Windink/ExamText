@@ -9,8 +9,11 @@
 
   <ItemGroup>
     <PackageReference Include="Abp" Version="6.1.1" />
-    <PackageReference Include="Abp.Web.Api" Version="6.1.1" />
     <PackageReference Include="Abp.Web.Common" Version="6.1.1" />
+    <PackageReference Include="Emgu.CV" Version="4.4.0.4099" />
+    <PackageReference Include="Emgu.CV.Bitmap" Version="4.4.0.4099" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.4.0.4099" />
+    <PackageReference Include="Emgu.CV.UI" Version="4.4.0.4099" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
