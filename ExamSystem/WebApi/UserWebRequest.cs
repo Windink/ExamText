@@ -85,9 +85,9 @@ namespace ExamSystem.WebApi
         {
                 var result = await client.GetAsync(uri + "?Id=" + input.id );
                 JToken re = await Getsuccess(result);
-                if (result.IsSuccessStatusCode ==false)
-                { return re["error"]; }
-                return re["result"];  
+                if (result.IsSuccessStatusCode == false)
+               { return re["error"]; }
+                 return re["result"];  
  
         }
 

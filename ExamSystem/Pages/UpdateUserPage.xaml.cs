@@ -48,6 +48,10 @@ namespace ExamSystem.Pages
             surname.Text = result["surname"].ToString();
             emailAddress.Text = result["emailAddress"].ToString();
             fullname.Text = result["fullName"].ToString();
+            if (result["isActive"].ToString().Equals("true"))
+                isActive.IsChecked = true;
+            else
+                isActive.IsChecked = false;
             foreach (var item in roles["items"])
             {
                 CheckBox checkBox = new CheckBox();
@@ -87,7 +91,8 @@ namespace ExamSystem.Pages
                 name = name.Text,
                 surname = surname.Text,
                 roleNames = roles.ToArray(),
-                fullName = fullname.Text
+                fullName = fullname.Text,
+                isActive = isActive.IsChecked.ToString()
             };
 
 

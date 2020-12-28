@@ -9,6 +9,32 @@
       Title="Roles">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="17*"/>
+        </Grid.RowDefinitions>
+        <Button Content="创建角色" VerticalAlignment="Center" HorizontalAlignment="Left" Background="AliceBlue" Click="Create_Click"  Width="52" Height="20" />
+        <ListView x:Name="listView" Grid.Row="1"   >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn  Header="角色ID" Width="100" DisplayMemberBinding="{Binding ID}" ></GridViewColumn>
+                    <GridViewColumn  Header="角色名字" Width="100" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                    <GridViewColumn Header=" " Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="删除" Width="40" Click="Delete_Click" Tag="{Binding ID}"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header=" " Width="60">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="修改" Width="40" Click="Updata_Click" Tag="{Binding ID}"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

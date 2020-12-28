@@ -45,8 +45,21 @@ namespace ExamSystem.Pages
             //} 
             string uri = Uris.BaseUrl + Uris.User + "Get";
             var result =await userRequest.GetUserRokes(uri, new entity<long>() { id = int.Parse(login_token.login_Id) });
+            foreach(var item in result)
+            {
+                if(item.Equals("ADMIN"))
+                {
+                    return;
+                }
+                else if(item.Equals("EXAMINEES"))
+                {
+                    listitemsbox.Items.Remove(userItem);
+                    listitemsbox.Items.Remove(roleItem);
+                    return;
+                }  
+            }
             //
-           
+            listitemsbox.Items.Clear();
         
         }
 
@@ -72,7 +85,7 @@ namespace ExamSystem.Pages
             }
             else if(liteName.Equals("角色"))
             {
-                frame.Content = new Roles();
+                frame.Content = new Roles(login_token);
             }
             else
             {

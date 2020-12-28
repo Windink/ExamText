@@ -18,6 +18,8 @@
             <TextBox Width="120" Name="surname" Height="20" VerticalContentAlignment="Center"></TextBox>
             <Label Content="全名：" HorizontalAlignment="Right"></Label>
             <TextBox Width="120" Name="fullname" Height="20" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="是否启用：" HorizontalAlignment="Right"></Label>
+            <CheckBox Width="120" Name="isActive" Height="20" VerticalContentAlignment="Center"></CheckBox>
             <Label Content="电子邮件：" HorizontalAlignment="Right"></Label>
             <TextBox Width="120" Name="emailAddress" Height="20" VerticalContentAlignment="Center"></TextBox>
             <Label Content="角色名：" HorizontalAlignment="Right"></Label>

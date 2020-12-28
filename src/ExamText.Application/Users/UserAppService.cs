@@ -24,7 +24,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ExamText.Users
 {
-    //[AbpAuthorize(PermissionNames.Pages_Users)]
+    [AbpAuthorize]
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedUserResultRequestDto, CreateUserDto, UserDto>, IUserAppService
     {
         private readonly UserManager _userManager;
@@ -102,7 +102,7 @@ namespace ExamText.Users
             await _userManager.DeleteAsync(user);
         }
 
-        [AbpAuthorize(PermissionNames.Pages_Users_Get,PermissionNames.Pages_Roles_Get)]      
+        [AbpAuthorize]      
         public async Task<ListResultDto<RoleDto>> GetRoles()
         {
             var roles = await _roleRepository.GetAllListAsync();

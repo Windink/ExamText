@@ -22,6 +22,7 @@ using System.Windows.Shapes;
 using System.Drawing;
 using System.IO;
 using ExamSystem.WebApi.entities.Examinees;
+using System.Threading.Tasks;
 
 namespace ExamSystem.Pages
 {
@@ -36,6 +37,7 @@ namespace ExamSystem.Pages
         private VideoCapture videoCapture;
         private Mat mat;
         private string NewId;
+        private string imagePath;
         public CreateUserPage(Token token)
         {
             InitializeComponent();
@@ -103,11 +105,35 @@ namespace ExamSystem.Pages
             else
             {
                 NewId = result["result"]["id"].ToString();
-                GoBack();
-               // Creat_Face();
+
+                var re = await UploadImage();
+
+                if (re["success"].Equals("flase"))
+                { MessageBox.Show( re["error"]["message"].ToString()); }
+                else
+                {
+                   GoBack();
+                }
             }
 
         }
+
+        private async Task<JToken> UploadImage()
+        { 
+            Bitmap bitmap = new Bitmap(imagePath);
+            string picture = ImagetoBase64(bitmap);
+
+            ExamineeRule examineeDto = new ExamineeRule()
+            {
+                picture = picture,
+                userID = NewId
+             };
+            var result = await examineeServer.CreateRequest(Uris.BaseUrl + Uris.Examinee + "Create", examineeDto);
+
+            return result;
+        }
+
+
 
         /// <summary>
         /// 录入人脸
@@ -196,17 +222,9 @@ namespace ExamSystem.Pages
             ofd.Filter = "jpg图片|*.jpg|png图片|*.png|jpeg图片|*.jpeg|bmp图片|*.bmp";
             if(ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                string imagePath = ofd.FileName;
-                Bitmap bitmap = new Bitmap(imagePath);
-                MessageBox.Show(imagePath);
+                imagePath = ofd.FileName;
                 image.Source = new BitmapImage(new Uri(imagePath));
-                string picture = ImagetoBase64(bitmap);
-                ExamineeRule examineeDto = new ExamineeRule()
-                {
-                    picture = picture,
-                    userID = NewId
-                };
-                //var result = await examineeServer.CreateRequest(Uris.BaseUrl + )
+
             }
         }
 

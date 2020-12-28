@@ -14,6 +14,7 @@ namespace ExamSystem.WebApi.entities
         public string emailAddress;
         public string[] roleNames;
         public string fullName;
+        public string isActive;
 
     }
 }

@@ -18,11 +18,15 @@ namespace ExamSystem.WebApi.Server
 
         public async Task<List<string>> GetUserRokes(string uri , entity<long> input)
         {
-            var result = await base.GetRequest(uri, input);
+            var result = await client.GetAsync(uri + "?Id=" + input.id);
             List<string> li = new List<string>();
-            foreach(var item in result["roleNames"])
-            {
-                li.Add(item.ToString());
+            JToken re = await Getsuccess(result);
+            if(result.IsSuccessStatusCode)
+            { 
+            foreach(var item in re["result"]["roleNames"])
+               {
+                     li.Add(item.ToString());
+                }
             }
             return li;
         }

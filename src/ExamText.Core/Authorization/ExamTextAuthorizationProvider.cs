@@ -8,14 +8,18 @@ namespace ExamText.Authorization
     {
         public override void SetPermissions(IPermissionDefinitionContext context)
         {        
-            
-            context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
-            context.CreatePermission(PermissionNames.Pages_Examinees, L("Examinees"));
+            var pages = context.CreatePermission(PermissionNames.Pages,L("Pages"));
 
-            var roles = context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));
+            var tenants = pages.CreateChildPermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
+
+            var examinees = pages.CreateChildPermission(PermissionNames.Pages_Examinees, L("Examinees"));
+
+            var examquestion = pages.CreateChildPermission(PermissionNames.Pages_Exam_Questions,L("ExamQuestion"));
+
+            var roles = pages.CreateChildPermission(PermissionNames.Pages_Roles, L("Roles"));
             roles.CreateChildPermission(PermissionNames.Pages_Roles_Get, L("GetRoles"));
 
-            var users = context.CreatePermission(PermissionNames.Pages_Users, L("Users"));
+            var users = pages.CreateChildPermission(PermissionNames.Pages_Users, L("Users"));
             users.CreateChildPermission(PermissionNames.Pages_Users_Create, L("CreateUser"));
             users.CreateChildPermission(PermissionNames.Pages_Users_Update, L("UpdataUser"));
             users.CreateChildPermission(PermissionNames.Pages_Users_Delete, L("DeteleUser"));
