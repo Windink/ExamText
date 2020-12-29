@@ -1512,33 +1512,15 @@ namespace ExamText.Migrations
                     b.ToTable("AbpUsers");
                 });
 
-            modelBuilder.Entity("ExamText.ExamCompletions.ExamCompletion", b =>
+            modelBuilder.Entity("ExamText.ExamChoiceQuestions.ExamChoiceQuestion", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Question")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ExamCompletions");
-                });
-
-            modelBuilder.Entity("ExamText.ExamQuestions.ExamQuestion", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("ExamQuestionID")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<int?>("ExamTestPaperId")
+                        .HasColumnType("int");
 
                     b.Property<string>("OrtherAnswerOne")
                         .IsRequired()
@@ -1562,7 +1544,87 @@ namespace ExamText.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ExamQuestion");
+                    b.HasIndex("ExamTestPaperId");
+
+                    b.ToTable("ExamChoiceQuestion");
+                });
+
+            modelBuilder.Entity("ExamText.ExamCompletions.ExamCompletion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Answer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ExamTestPaperId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Question")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamTestPaperId");
+
+                    b.ToTable("ExamCompletions");
+                });
+
+            modelBuilder.Entity("ExamText.ExamShortAnswerQuestions.ExamShortAnswerQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Answer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ExamTestPaperId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Question")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamTestPaperId");
+
+                    b.ToTable("ExamShortAnswerQuestion");
+                });
+
+            modelBuilder.Entity("ExamText.ExamTestPapers.ExamTestPaper", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ExamCompletionIDs")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExamQuestionIDs")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExamShortAnswerQuestionIDs")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExamTestPaperName")
+                        .HasColumnType("nvarchar(60)")
+                        .HasMaxLength(60);
+
+                    b.Property<bool>("isActive")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ExamTestPapers");
                 });
 
             modelBuilder.Entity("ExamText.Examinees.Examinee", b =>
@@ -1848,6 +1910,27 @@ namespace ExamText.Migrations
                     b.HasOne("ExamText.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("ExamText.ExamChoiceQuestions.ExamChoiceQuestion", b =>
+                {
+                    b.HasOne("ExamText.ExamTestPapers.ExamTestPaper", null)
+                        .WithMany("ExamQuestions")
+                        .HasForeignKey("ExamTestPaperId");
+                });
+
+            modelBuilder.Entity("ExamText.ExamCompletions.ExamCompletion", b =>
+                {
+                    b.HasOne("ExamText.ExamTestPapers.ExamTestPaper", null)
+                        .WithMany("ExamCompletions")
+                        .HasForeignKey("ExamTestPaperId");
+                });
+
+            modelBuilder.Entity("ExamText.ExamShortAnswerQuestions.ExamShortAnswerQuestion", b =>
+                {
+                    b.HasOne("ExamText.ExamTestPapers.ExamTestPaper", null)
+                        .WithMany("ExamShortAnswerQuestions")
+                        .HasForeignKey("ExamTestPaperId");
                 });
 
             modelBuilder.Entity("ExamText.Examinees.Examinee", b =>

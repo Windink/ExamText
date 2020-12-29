@@ -4,8 +4,10 @@ using ExamText.Authorization.Roles;
 using ExamText.Authorization.Users;
 using ExamText.MultiTenancy;
 using ExamText.Examinees;
-using ExamText.ExamQuestions;
 using ExamText.ExamCompletions;
+using ExamText.ExamShortAnswerQuestions;
+using ExamText.ExamTestPapers;
+using ExamText.ExamChoiceQuestions;
 
 namespace ExamText.EntityFrameworkCore
 {
@@ -16,7 +18,11 @@ namespace ExamText.EntityFrameworkCore
 
         public virtual DbSet<ExamCompletion> ExCompletions { get; set; }
 
-        public virtual DbSet<ExamQuestion> ExamQuestions { get; set; }
+        public virtual DbSet<ExamChoiceQuestion> ExamQuestions { get; set; }
+
+        public virtual DbSet<ExamShortAnswerQuestion> ExamShortAnswerQuestions { get; set; }
+
+        public virtual DbSet<ExamTestPaper> ExamTestPapers { get; set; }
 
         public ExamTextDbContext(DbContextOptions<ExamTextDbContext> options)
             : base(options)

@@ -13,6 +13,7 @@ namespace ExamText
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<ExamTextAuthorizationProvider>();
+
         }
 
         public override void Initialize()

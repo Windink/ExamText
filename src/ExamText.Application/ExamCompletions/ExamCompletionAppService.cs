@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 namespace ExamText.ExamCompletions
 {
     [AbpAuthorize(PermissionNames.Pages_Exam_Questions)]
-    public class ExamCompletionAppService : AsyncCrudAppService<ExamCompletion, ExamCompletionDto, int,PageExamCompletionRequestDto,ExamCompletionDto, ExamCompletionDto>,IExamCompletionAppService
+    public class ExamCompletionAppService : AsyncCrudAppService<ExamCompletion, ExamCompletionDto, int,PageExamCompletionRequestDto,CreateExamCompletionDto, ExamCompletionDto>,IExamCompletionAppService
     {
         private readonly IRepository<ExamCompletion> _examCompletionRepository;
 
@@ -24,6 +24,17 @@ namespace ExamText.ExamCompletions
             _examCompletionRepository = examquestionRepository;
         }
 
+
+        public async override Task<ExamCompletionDto> UpdateAsync(ExamCompletionDto input)
+        {
+            CheckUpdatePermission();
+
+            var examcomplete = ObjectMapper.Map<ExamCompletion>(input);
+
+            await _examCompletionRepository.UpdateAsync(examcomplete);
+
+            return await GetAsync(input);
+        }
 
     }
 }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace ExamText.ExamCompletions
 {
-     public interface IExamCompletionAppService : IAsyncCrudAppService<ExamCompletionDto, int,PageExamCompletionRequestDto,ExamCompletionDto, ExamCompletionDto>
+     public interface IExamCompletionAppService : IAsyncCrudAppService<ExamCompletionDto, int,PageExamCompletionRequestDto,CreateExamCompletionDto, ExamCompletionDto>
     {
 
     }

@@ -8,7 +8,7 @@ using Abp.AutoMapper;
 
 namespace ExamText.ExamCompletions.Dto
 {
-    [AutoMapFrom(typeof(ExamCompletion))]
+    [AutoMap(typeof(ExamCompletion))]
     public class ExamCompletionDto : EntityDto
     {
         [Required]
