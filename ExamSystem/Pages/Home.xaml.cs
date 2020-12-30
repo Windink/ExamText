@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ExamSystem.WebApi.entities;
 using ExamSystem.CustomControl;
+using ExamSystem.Pages.ExamPage;
 
 namespace ExamSystem.Pages
 {
@@ -86,6 +87,10 @@ namespace ExamSystem.Pages
             else if(liteName.Equals("角色"))
             {
                 frame.Content = new Roles(login_token);
+            }
+            else if(liteName.Equals("考试管理"))
+            {
+                frame.Content = new ExamPaper(login_token);
             }
             else
             {

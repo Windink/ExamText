@@ -15,5 +15,7 @@ namespace ExamText.ExamCompletions.Dto
 
         [Required]
         public string Answer { get; set; }
+
+        public int branch { get; set; }
     }
 }

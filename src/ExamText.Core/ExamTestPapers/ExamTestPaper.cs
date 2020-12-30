@@ -22,6 +22,8 @@ namespace ExamText.ExamTestPapers
 
         public bool isActive { get; set; }
 
+        public int brach { get; set; }
+
         public ICollection<ExamCompletion> ExamCompletions { get; set; }
 
         public ICollection<ExamChoiceQuestion> ExamQuestions { get; set; }

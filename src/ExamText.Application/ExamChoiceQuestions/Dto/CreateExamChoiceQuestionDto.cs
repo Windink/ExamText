@@ -24,5 +24,7 @@ namespace ExamText.ExamChoiceQuestions.Dto
         [Required]
         public string OrtherAnswerThree { get; set; }
 
+        public int branch { get; set; }
+
     }
 }

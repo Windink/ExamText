@@ -4,6 +4,8 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Abp.Domain.Entities;
+using ExamText.ExamTestPapers;
+using System.Collections.Generic;
 
 namespace ExamText.ExamShortAnswerQuestions
 {
@@ -16,5 +18,8 @@ namespace ExamText.ExamShortAnswerQuestions
         [Required]
         public string Answer { get; set; }
 
+        public int brach { get; set; }
+
+        public ICollection<ExamTestPaper> ExamTestPapers;
     }
 }

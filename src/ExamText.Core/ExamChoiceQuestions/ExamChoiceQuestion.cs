@@ -6,6 +6,7 @@ using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
 using Abp.Timing;
 using ExamText.ExamCompletions;
+using ExamText.ExamTestPapers;
 
 namespace ExamText.ExamChoiceQuestions
 {
@@ -28,7 +29,9 @@ namespace ExamText.ExamChoiceQuestions
         [Required]
         public string OrtherAnswerThree { get; set; }
 
+        public int branch { get; set; }
 
+        public ICollection<ExamTestPaper> ExamTestPapers;
 
 
 

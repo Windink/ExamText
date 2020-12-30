@@ -1542,6 +1542,9 @@ namespace ExamText.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("branch")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ExamTestPaperId");
@@ -1567,6 +1570,9 @@ namespace ExamText.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("branch")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ExamTestPaperId");
@@ -1591,6 +1597,9 @@ namespace ExamText.Migrations
                     b.Property<string>("Question")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("brach")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -1618,6 +1627,9 @@ namespace ExamText.Migrations
                     b.Property<string>("ExamTestPaperName")
                         .HasColumnType("nvarchar(60)")
                         .HasMaxLength(60);
+
+                    b.Property<int>("brach")
+                        .HasColumnType("int");
 
                     b.Property<bool>("isActive")
                         .HasColumnType("bit");

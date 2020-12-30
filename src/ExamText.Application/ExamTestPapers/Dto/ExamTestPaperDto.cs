@@ -18,5 +18,7 @@ namespace ExamText.ExamTestPapers.Dto
         public string ExamCompletionIDs { get; set; }
 
         public string ExamShortAnswerQuestionIDs { get; set; }
+
+        public int branch { get; set; }
     }
 }

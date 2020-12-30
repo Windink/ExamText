@@ -1,4 +1,5 @@
 ﻿using Abp.Domain.Entities;
+using ExamText.ExamTestPapers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,5 +18,9 @@ namespace ExamText.ExamCompletions
 
         [Required]
         public string Answer { get; set; }
+
+        public int branch { get; set; }
+
+        public ICollection<ExamTestPaper> ExamTestPapers;
     }
 }

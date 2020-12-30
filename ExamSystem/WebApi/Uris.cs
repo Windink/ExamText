@@ -19,5 +19,13 @@ namespace ExamSystem.WebApi
 
         public const string Examinee = "/api/services/app/Examinee/"; // 用户考生照片类
 
+        public const string ChoiceQuestion = "/api/services/app/ExamChoiceQuestion/";//选择题
+
+        public const string Completion = "/api/services/app/ExamCompletion/"; //填空题
+
+        public const string SAQuestion = "/api/services/app/ExamSAQuestion/"; //问答题
+
+        public const string TestPage = "/api/services/app/ExamTestPaper/";//试卷
+
     }
 }
