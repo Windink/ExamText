@@ -18,7 +18,9 @@
             <Button Content="选择题" Margin="0,0,3,0" Click="CreateChoice_Click" ></Button>
             <Button Content="填空题" Margin="0,0,3,0" Click="CreateCompletion_Click"></Button>
             <Button Content="问答题" Margin="0,0,3,0" Click="CreateASQuestion_Click"></Button>
-            <Button Margin="10,0,0,0" Content="确定创建" Click="Build_Click"></Button>
+            <Label Margin="50,0,0,0" Content="试卷名称"></Label>
+            <TextBox Width="150" Name="textpapaername"></TextBox>
+             <Button Margin="100,0,0,0" Content="确定创建" Click="Submit_Click"></Button>
             <Button  Margin="10,0,0,0" Content="返回" Click="Revesr_Click"></Button>
         </StackPanel>
         <Frame x:Name="questionFram" Grid.Row="1" />

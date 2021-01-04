@@ -7,7 +7,7 @@ using System.Text;
 
 namespace ExamText.ExamTestPapers.Dto
 {
-    [AutoMapFrom(typeof(ExamTestPaper))]
+    [AutoMap(typeof(ExamTestPaper))]
     public class ExamTestPaperDto :EntityDto
     {
         [StringLength(60)]
@@ -20,5 +20,7 @@ namespace ExamText.ExamTestPapers.Dto
         public string ExamShortAnswerQuestionIDs { get; set; }
 
         public int branch { get; set; }
+
+        public bool isActive { get; set; }
     }
 }

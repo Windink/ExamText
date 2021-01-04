@@ -26,10 +26,31 @@ namespace ExamText.ExamTestPapers
             CheckCreatePermission();
 
             var test = ObjectMapper.Map<ExamTestPaper>(input);
+            test.ExamCompletionIDs =string.Join(',',input.ExamCompletionIDs);
+            test.ExamQuestionIDs =string.Join(',',input.ExamQuestionIDs);
+            test.ExamShortAnswerQuestionIDs =string.Join(',',input.ExamShortAnswerQuestionIDs);
 
             await _examtestrepository.InsertAsync(test);
 
             return MapToEntityDto(test);
+        }
+
+        public async Task UpdataTestPageActive(int input)
+        {
+            
+            CheckPermission();
+
+            var test = _examtestrepository.Get(input);
+            test.isActive = true;
+
+           await  _examtestrepository.UpdateAsync(test);
+        }
+
+        private void CheckPermission()
+        {
+            bool canAssignTaskToOther = PermissionChecker.IsGranted(PermissionNames.Pages_Exam_Questions);
+            if (!canAssignTaskToOther)
+            { throw new AbpAuthorizationException("没有权限"); }
         }
 
         //public override Task<ExamTestPaperDto> UpdateAsync(UpdateTestPaperDto input)

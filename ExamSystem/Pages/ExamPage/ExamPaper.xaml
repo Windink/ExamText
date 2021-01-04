@@ -36,7 +36,7 @@
                     <GridViewColumn Header=" " Width="60">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="修改" Width="40" Click="Updata_Click" Tag="{Binding ID}"></Button>
+                                <Button Content="发布" Width="40" Click="Updata_Click" Tag="{Binding ID}"></Button>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

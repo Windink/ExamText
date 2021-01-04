@@ -15,6 +15,8 @@ namespace ExamSystem.WebApi.entities.TestPapers
 
         public List<int> examShortAnswerQuestionIDs;
 
+        public bool isActive = false;
+
         public TestPaperRule()
         {
             examQuestionIDs = new List<int>();

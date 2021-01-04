@@ -1598,7 +1598,7 @@ namespace ExamText.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("brach")
+                    b.Property<int>("branch")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -1628,7 +1628,7 @@ namespace ExamText.Migrations
                         .HasColumnType("nvarchar(60)")
                         .HasMaxLength(60);
 
-                    b.Property<int>("brach")
+                    b.Property<int>("branch")
                         .HasColumnType("int");
 
                     b.Property<bool>("isActive")

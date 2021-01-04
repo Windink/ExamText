@@ -14,7 +14,7 @@ namespace ExamSystem.Pages.ExamPage
     /// </summary>
     public partial class ChoicePage : Page
     {
-        private ChocieQuestionServer choiceServer;
+        private readonly ChocieQuestionServer choiceServer;
 
         public ChoicePage(Token token)
         {
@@ -30,13 +30,21 @@ namespace ExamSystem.Pages.ExamPage
                 TrueAnswer = trueAnswer.Text,
                 OrtherAnswerOne = ortherAnswerOne.Text,
                 OrtherAnswerThree = ortherAnswerThree.Text,
-                OrtherAnswerTwo = ortherAnswerTwo.Text
+                OrtherAnswerTwo = ortherAnswerTwo.Text,
+                branch = int.Parse(branth.Text)
             };
 
             var result = await choiceServer.CreateRequest(Uris.BaseUrl + Uris.ChoiceQuestion + "Create", choice);
             //MessageBox.Show(result.ToString());
-            QuestionBank.testPaperRule.examQuestionIDs.Add(int.Parse(result["result"]["id"].ToString()));
-            GoBack();
+            if ((bool)result["success"])
+            {
+                QuestionBank.testPaperRule.examQuestionIDs.Add(int.Parse(result["result"]["id"].ToString()));
+                GoBack();
+            }
+            else
+            {
+                MessageBox.Show(result["error"]["message"].ToString());
+            }
         }
 
         public void GoBack()

@@ -100,20 +100,22 @@ namespace ExamSystem.Pages
 
             var result = await userRequest.CreateRequest(Uris.BaseUrl + Uris.User + "Create", user);
 
-            if (result["success"].Equals("flase"))
-            { MessageBox.Show(result["error"]["message"].ToString()); }
-            else
+            if ((bool)result["success"])
             {
                 NewId = result["result"]["id"].ToString();
 
                 var re = await UploadImage();
 
                 if (re["success"].Equals("flase"))
-                { MessageBox.Show( re["error"]["message"].ToString()); }
+                { MessageBox.Show(re["error"]["message"].ToString()); }
                 else
                 {
-                   GoBack();
-                }
+                    GoBack();
+                }      
+            }
+            else
+            {
+               MessageBox.Show(result["error"]["message"].ToString()); 
             }
 
         }

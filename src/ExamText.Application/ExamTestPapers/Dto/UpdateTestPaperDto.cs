@@ -19,5 +19,7 @@ namespace ExamText.ExamTestPapers.Dto
         public int[] ExamShortAnswerQuestionIDs { get; set; }
 
         public int branch { get; set; }
+
+        public bool isActive { get; set; }
     }
 }

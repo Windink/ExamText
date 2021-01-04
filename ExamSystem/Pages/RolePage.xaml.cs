@@ -143,11 +143,11 @@ namespace ExamSystem.Pages
 
             var result = await roleServer.CreateRequest(Uris.BaseUrl + Uris.Role + "Create", role);
 
-            if (result["success"].Equals("flase"))
-            { MessageBox.Show(result["error"]["message"].ToString()); }
+            if ((bool)result["success"])
+            {  Goback();}
             else
             {
-                Goback();
+                MessageBox.Show(result["error"]["message"].ToString()); 
             }
         }
 

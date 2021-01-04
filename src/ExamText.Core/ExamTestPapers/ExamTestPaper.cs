@@ -22,7 +22,7 @@ namespace ExamText.ExamTestPapers
 
         public bool isActive { get; set; }
 
-        public int brach { get; set; }
+        public int branch { get; set; }
 
         public ICollection<ExamCompletion> ExamCompletions { get; set; }
 

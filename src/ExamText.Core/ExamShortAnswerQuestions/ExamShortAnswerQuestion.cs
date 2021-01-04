@@ -18,7 +18,7 @@ namespace ExamText.ExamShortAnswerQuestions
         [Required]
         public string Answer { get; set; }
 
-        public int brach { get; set; }
+        public int branch { get; set; }
 
         public ICollection<ExamTestPaper> ExamTestPapers;
     }

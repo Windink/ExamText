@@ -7,7 +7,7 @@ namespace ExamSystem.WebApi.entities.ChocieQuestions
 {
     public class ChoiceQuestionRule : IResult
     {
-       
+
         public string Question { get; set; }
 
         public string TrueAnswer { get; set; }
@@ -17,5 +17,8 @@ namespace ExamSystem.WebApi.entities.ChocieQuestions
         public string OrtherAnswerTwo { get; set; }
 
         public string OrtherAnswerThree { get; set; }
+
+        public int branch { get; set; }
+           
     }
 }

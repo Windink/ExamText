@@ -12,6 +12,6 @@
     <Grid>
         <CU:ChoiceControl  HorizontalAlignment="Center" Height="141" VerticalAlignment="Top" Width="800" Margin="-3,0,0,0"/>
         <Frame Height="100" />
-       
+        <CU:TextNumber ></CU:TextNumber>
     </Grid>
 </Page>

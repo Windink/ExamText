@@ -11,5 +11,6 @@ namespace ExamSystem.WebApi.entities.Completions
 
         public string Answer { get; set; }
 
+        public int branch { get; set; }
     }
 }
