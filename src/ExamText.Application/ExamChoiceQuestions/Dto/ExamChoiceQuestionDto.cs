@@ -26,5 +26,6 @@ namespace ExamText.ExamChoiceQuestions.Dto
 
         public int branch { get; set; }
 
+        public char TrueAnswerIndex { get; set; }
     }
 }

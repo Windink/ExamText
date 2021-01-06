@@ -19,7 +19,7 @@ namespace ExamText.Examinees
 
         public TaskState State { get; set; }
 
-        //[ForeignKey(nameof(UserId))]
+        [ForeignKey(nameof(UserID))]
         public User user { get; set; }
         [Required]
         public long UserID { get; set; }

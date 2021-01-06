@@ -46,9 +46,10 @@ namespace ExamSystem.Pages.ExamPage
         //d}
             foreach (var item in this.testpapers)
             {
-                
+
                 var it = new { Name = item["examTestPaperName"], IsActive = item["isActive"], ChoiceName = item["examQuestionIDs"].ToString().Split(',').Length,
-                    ComletionName = item["examCompletionIDs"].ToString().Split(',').Length, SAQName=item["examShortAnswerQuestionIDs"].ToString().Split(',').Length
+                    ComletionName = item["examCompletionIDs"].ToString().Split(',').Length, SAQName = item["examShortAnswerQuestionIDs"].ToString().Split(',').Length,
+                    ID = item["id"]
                 };
                 listView.Items.Add(it);
             }
@@ -76,7 +77,7 @@ namespace ExamSystem.Pages.ExamPage
         private async void Delete_Click(object sender, RoutedEventArgs e)
         {
             Button button = sender as Button;
-            if (MessageBox.Show("你是否确实删除此用户", "删除", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
+            if (MessageBox.Show("你是否确实删除此试卷", "删除", MessageBoxButton.OKCancel) == MessageBoxResult.OK)
             {
                 var result = await testpaperServer.DeleteRequest(Uris.BaseUrl + Uris.TestPage + "Delete", new entity<long>
                 {
@@ -98,6 +99,12 @@ namespace ExamSystem.Pages.ExamPage
             Frame frame = new Frame();
             frame.Content = new CreatePages(token);
             this.Content = frame;
+        }
+
+
+        private void Preview_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

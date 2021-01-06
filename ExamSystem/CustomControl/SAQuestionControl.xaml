@@ -9,10 +9,10 @@
     <Grid>
         <StackPanel Orientation="Vertical">
         <StackPanel Orientation="Horizontal">
-            <Label Content="1"  FontSize="15"/>
-            <Label Content="题目" FontSize="15" Height="50"/>
+            <Label Content="1"  FontSize="15" Name="QuestionIndex"/>
+                <Label Content="题目" FontSize="15" Height="50" Name="Questioncontent"/>
         </StackPanel>
-          <TextBox Height="100" Name="Answers"/>  
+          <TextBox Height="100" Name="Answers" TextWrapping="Wrap"/>  
         </StackPanel>
     </Grid>
 </UserControl>

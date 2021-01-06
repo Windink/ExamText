@@ -18,9 +18,11 @@ namespace ExamSystem.CustomControl
     /// </summary>
     public partial class SAQuestionControl : UserControl
     {
-        public SAQuestionControl()
+        public SAQuestionControl(int index,string Question)
         {
             InitializeComponent();
+            QuestionIndex.Content = index.ToString();
+            Questioncontent.Content = Question;
         }
 
 

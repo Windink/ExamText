@@ -21,21 +21,21 @@
                 <RowDefinition Height="25*"/>
                 <RowDefinition Height="25*"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Orientation="Horizontal" Name="Aanswer">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
                 <CheckBox x:Name="OneCheck" VerticalAlignment="Top" Content="A"  Margin="0,7,0,0"  Checked="Check_Checked"></CheckBox>
-                <Label  Content="答案" VerticalAlignment="Center"    />
+                <Label  Content="答案" VerticalAlignment="Center" Name="Aanswer"   />
             </StackPanel>
-            <StackPanel Grid.Row="1" Orientation="Horizontal" Name="Banswer">
+            <StackPanel Grid.Row="1" Orientation="Horizontal" >
                 <CheckBox x:Name="TwoCheck" Content="B" VerticalAlignment="Top" Margin="0,7,0,0"  Checked="Check_Checked"></CheckBox>
-                <Label  Content="答案" VerticalAlignment="Center"  />
+                <Label  Content="答案" VerticalAlignment="Center" Name="Banswer" />
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="2" Name="Canswer">
+            <StackPanel Orientation="Horizontal" Grid.Row="2" >
                 <CheckBox x:Name="ThreeCheck" Content="C" VerticalAlignment="Top" Margin="0,7,0,0"   Checked="Check_Checked"></CheckBox>
-                <Label Content="答案" VerticalAlignment="Center" />
+                <Label Content="答案" VerticalAlignment="Center" Name="Canswer"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Grid.Row="3" Name="Danswer">
+            <StackPanel Orientation="Horizontal" Grid.Row="3" >
                 <CheckBox x:Name="FourCheck" Content="D" VerticalAlignment="Top" Margin="0,7,0,0"  Grid.Row="3" Grid.Column="0" Checked="Check_Checked"></CheckBox>
-                <Label  Content="答案" VerticalAlignment="Center"  Grid.Row="3" Grid.Column="1"/>
+                <Label  Content="答案" VerticalAlignment="Center" Name="Danswer" Grid.Row="3" Grid.Column="1"/>
             </StackPanel>
         </Grid>
     </Grid>

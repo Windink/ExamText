@@ -32,7 +32,7 @@ namespace ExamSystem.WebApi
         /// </summary>
         /// <param name="Dto"></param>
         /// <returns></returns>
-        private StringContent GetJson(IResult Dto)
+        public StringContent GetJson(IResult Dto)
         {
             var js = JsonConvert.SerializeObject(Dto);
 

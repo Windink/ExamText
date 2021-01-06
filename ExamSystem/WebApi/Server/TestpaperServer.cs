@@ -18,8 +18,8 @@ namespace ExamSystem.WebApi.Server
         public async Task<JToken> UpdataTestActive(string uri, entity<long> input)
         {
 
-          
-            var result = await client.PostAsync(uri + "?id="+ input.id,null);
+            var st = GetJson(input);
+            var result = await client.PostAsync(uri,st);
             JToken re = await Getsuccess(result);
 
             return re;

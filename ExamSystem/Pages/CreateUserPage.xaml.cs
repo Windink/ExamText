@@ -34,8 +34,7 @@ namespace ExamSystem.Pages
         private UserServer userRequest;
         private ExamineeServer examineeServer;
         private Token token;
-        private VideoCapture videoCapture;
-        private Mat mat;
+        
         private string NewId;
         private string imagePath;
         public CreateUserPage(Token token)
@@ -137,62 +136,7 @@ namespace ExamSystem.Pages
 
 
 
-        /// <summary>
-        /// 录入人脸
-        /// </summary>
-        private void Creat_Face()
-        {
-            imagebox.Visible = true;
-            videoCapture = new VideoCapture();
-
-            if (videoCapture == null)
-            {
-                return;
-            }
-          
-            videoCapture.ImageGrabbed += VideoCapture_ImageGrabbed;
-            mat = new Mat();
-
-            videoCapture.Start();
-        }
-
-        private void VideoCapture_ImageGrabbed(object sender, EventArgs e)
-        {
-            videoCapture.Retrieve(mat, 0);   //接收数据
-
-            CascadeClassifier classifier = new CascadeClassifier("D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\haarcascade_frontalface_alt2.xml");
-            Mat grey = new Mat();
-            CvInvoke.CvtColor(mat,grey,ColorConversion.Rgba2Gray);
-            System.Drawing.Rectangle[] faceRects = classifier.DetectMultiScale(grey, 1.2, 3);
-            MCvScalar mCvScalar = new MCvScalar(0, 255, 0);
-            foreach (var faceRect in faceRects)
-            {
-                System.Drawing.Rectangle rectangle = new System.Drawing.Rectangle(faceRect.X - 20, faceRect.Y - 20, 
-                    faceRect.X + faceRect.Width + 20, faceRect.Y + faceRect.Height + 20);
-                CvInvoke.Rectangle(mat,rectangle,mCvScalar,2);
-            }
-
-             
-
-            imagebox.Image = mat;       //显示图像
-
-            //frame.Dispose();
-
-        }
-
-        /// <summary>
-        /// 关闭摄像头
-        /// </summary>
-        public void CloseVide()
-        {
-            if (videoCapture != null && videoCapture.IsOpened)
-            {
-                videoCapture.Stop();
-                videoCapture.Dispose();
-            }
-            imagebox.Visible = false;
-        }
-
+    
 
         /// <summary>
         /// 返回

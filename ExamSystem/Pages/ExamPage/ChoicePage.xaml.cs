@@ -31,7 +31,8 @@ namespace ExamSystem.Pages.ExamPage
                 OrtherAnswerOne = ortherAnswerOne.Text,
                 OrtherAnswerThree = ortherAnswerThree.Text,
                 OrtherAnswerTwo = ortherAnswerTwo.Text,
-                branch = int.Parse(branth.Text)
+                branch = int.Parse(branth.Text),
+                TrueAnswerIndex = char.Parse(trueAnserwindex.SelectedItem.ToString())
             };
 
             var result = await choiceServer.CreateRequest(Uris.BaseUrl + Uris.ChoiceQuestion + "Create", choice);

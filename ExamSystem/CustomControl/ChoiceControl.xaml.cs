@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,20 +22,52 @@ namespace ExamSystem.CustomControl
         private string ChoiceChar;
         private string ChoiceString;
         private CheckBox IsCheckBox;
-
-        public ChoiceControl()
+        private Label[] answerContrls ;
+        private string[] answers;
+        private enum AnswerTONum
         {
-            InitializeComponent();
+            A = 0,
+            B = 1,
+            C = 2,
+            D = 3
         }
 
+        public ChoiceControl(int index,JToken choicequestion)
+        {
+            InitializeComponent();
+            QuestionIndex.Content = index;
+            answerContrls = new Label[4] { Aanswer, Banswer, Canswer, Danswer };
+            answers = new string[4] {choicequestion["trueAnswer"].ToString(), 
+                choicequestion["ortherAnswerOne"].ToString(),
+                choicequestion["ortherAnswerTwo"].ToString(), 
+                choicequestion["ortherAnswerThree"].ToString() };
 
+            AnswerTONum d = (AnswerTONum)Enum.Parse(typeof(AnswerTONum),choicequestion["trueAnswerIndex"].ToString());
+            
+            int flag = (int)d;
+            Initialize(flag);
+        }
+
+        private void Initialize(int flag)
+        {
+            int tab = 1;
+            answerContrls[flag].Content = answers[0];
+             for(int i=0; i < 4;i++)
+            {
+                if (i == flag) { continue; }
+                else
+                {
+                    answerContrls[i].Content = answers[tab++];
+                }
+            }
+        }
 
 
         /// <summary>
         /// 返回答案
         /// </summary>
         /// <returns></returns>
-        public Dictionary<string,string> GetChoiceinformation()
+        private Dictionary<string,string> GetChoiceinformation()
         {
             if(ChoiceChar.Equals(""))
             {

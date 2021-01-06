@@ -31,6 +31,8 @@ namespace ExamText.ExamChoiceQuestions
 
         public int branch { get; set; }
 
+        public char TrueAnswerIndex { get; set; }
+
         public ICollection<ExamTestPaper> ExamTestPapers;
 
 

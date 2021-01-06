@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using ExamText.ExamTestPapers.Dto;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,6 @@ namespace ExamText.ExamTestPapers
     public interface IExamTestPaperAppService : IAsyncCrudAppService<ExamTestPaperDto,int,PageExamTestPaperResultRequestDto,CreateExamTestPaperDto,UpdateTestPaperDto>
     {
 
-        Task UpdataTestPageActive(int input);
+        Task UpdataTestPageActive(EntityDto<int> input);
     }
 }

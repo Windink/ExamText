@@ -23,10 +23,11 @@ namespace ExamSystem.CustomControl
         private string Question;
         private List<TextBlock> textBlocks;
 
-        public CompletionControl(string Question)
+        public CompletionControl(int index,string Question)
         {
             InitializeComponent();
             textBlocks = new List<TextBlock>();
+            questionindex.Content = index.ToString();
             this.Question = Question;
             Initialize(Question);
         }

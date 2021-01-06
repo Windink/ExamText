@@ -1542,6 +1542,10 @@ namespace ExamText.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TrueAnswerIndex")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(1)");
+
                     b.Property<int>("branch")
                         .HasColumnType("int");
 

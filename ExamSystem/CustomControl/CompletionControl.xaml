@@ -7,7 +7,7 @@
              mc:Ignorable="d" Height="76" Width="757">
     <Grid>
         <StackPanel Orientation="Horizontal" Name="Completions">
-            
+            <Label Content="1" VerticalAlignment="Center" Name="questionindex"></Label>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -10,7 +10,7 @@
       Title="ChoicePage">
 
     <Grid>
-        <UniformGrid VerticalAlignment="Top" HorizontalAlignment="Left" Columns="2" Grid.Column="1" Margin="40,0,0,0">
+        <UniformGrid VerticalAlignment="Top" HorizontalAlignment="Left" Columns="2" Grid.Column="1" Margin="0,0,0,0">
             <Label Content="题目：" HorizontalAlignment="Right"></Label>
             <TextBox Width="400" Name="question" Height="20" VerticalContentAlignment="Center"></TextBox>
             <Label Content="正确答案：" HorizontalAlignment="Right"></Label>
@@ -21,6 +21,13 @@
             <TextBox Width="400" Name="ortherAnswerTwo" Height="20" VerticalContentAlignment="Center"></TextBox>
             <Label Content="错误答案：" HorizontalAlignment="Right"></Label>
             <TextBox Width="400" Name="ortherAnswerThree" Height="20" VerticalContentAlignment="Center"></TextBox>
+            <Label Content="您希望的正确的编号;：" HorizontalAlignment="Right"></Label>
+            <ComboBox Name="trueAnserwindex" Width="40" HorizontalAlignment="Left" SelectedIndex="0" >
+                <ComboBoxItem Content="A"></ComboBoxItem>
+                <ComboBoxItem Content="B"></ComboBoxItem>
+                <ComboBoxItem Content="C"></ComboBoxItem>
+                <ComboBoxItem Content="D"></ComboBoxItem>
+            </ComboBox>
             <Label Content="分数：" HorizontalAlignment="Right"></Label>
             <cu:TextNumber   Width="100" x:Name="branth" Height="20" VerticalContentAlignment="Center" HorizontalAlignment="Left"></cu:TextNumber>
             <Button Content="创建" Margin="300,10,10,0"  Click="Button_Click"></Button>

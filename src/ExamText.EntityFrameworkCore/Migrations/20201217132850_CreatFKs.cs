@@ -6,6 +6,11 @@ namespace ExamText.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.AddColumn<long>(
+               name: "UserID",
+               table: "Examinees",
+               nullable: false);
+
             migrationBuilder.CreateIndex(
               name: "IX_Examinees_UserID",
               table: "Examinees",
@@ -29,6 +34,11 @@ namespace ExamText.Migrations
             migrationBuilder.DropIndex(
                 name: "IX_Examinees_UserID",
                 table: "Examinees");
+
+            migrationBuilder.DropColumn(
+             name: "UserID",
+             table: "Examinees");
+
         }
     }
 }

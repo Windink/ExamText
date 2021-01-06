@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using Abp.Application.Services.Dto;
 using Abp.Authorization;
 using Abp.Domain.Repositories;
 using ExamText.Authorization;
@@ -35,12 +36,12 @@ namespace ExamText.ExamTestPapers
             return MapToEntityDto(test);
         }
 
-        public async Task UpdataTestPageActive(int input)
+        public async Task UpdataTestPageActive(EntityDto<int> input)
         {
             
             CheckPermission();
 
-            var test = _examtestrepository.Get(input);
+            var test = _examtestrepository.Get(input.Id);
             test.isActive = true;
 
            await  _examtestrepository.UpdateAsync(test);

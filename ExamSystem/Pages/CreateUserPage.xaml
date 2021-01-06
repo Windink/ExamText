@@ -15,9 +15,7 @@
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
-        <wfi:WindowsFormsHost Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="200">
-            <emgucv:ImageBox FunctionalMode="Minimum" Visible="True" x:Name="imagebox" SizeMode="StretchImage"></emgucv:ImageBox>
-        </wfi:WindowsFormsHost>
+        
         <UniformGrid VerticalAlignment="Top" HorizontalAlignment="Left" Columns="2" Grid.Column="1" Margin="40,0,0,0">
             <Label Content="用户名：" HorizontalAlignment="Right"></Label>
             <TextBox Width="120" Name="userName" Height="20" VerticalContentAlignment="Center"></TextBox>

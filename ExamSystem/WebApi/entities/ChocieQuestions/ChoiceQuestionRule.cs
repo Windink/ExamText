@@ -19,6 +19,8 @@ namespace ExamSystem.WebApi.entities.ChocieQuestions
         public string OrtherAnswerThree { get; set; }
 
         public int branch { get; set; }
-           
+
+         public char TrueAnswerIndex { get; set; }
+
     }
 }
