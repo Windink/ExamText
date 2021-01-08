@@ -23,16 +23,20 @@ namespace ExamText.ExamChoiceQuestions
         }
 
 
-        public override async Task<ExamChoiceQuestionDto> CreateAsync(CreateExamChoiceQuestionDto input)
-        {
-            var examquestion = ObjectMapper.Map<ExamChoiceQuestion>(input);
-           
-           
-            if((Array.Find(changeNum,x=>x==examquestion.TrueAnswerIndex)).Equals((char)0))
-            { examquestion.TrueAnswerIndex = 'A'; }
-            await _examquestionRepository.InsertAsync(examquestion);
+        //public override async Task<ExamChoiceQuestionDto> CreateAsync(CreateExamChoiceQuestionDto input)
+        //{
+        //    CheckCreatePermission();
 
-            return MapToEntityDto(examquestion);
-        }
+        //    var examquestion = ObjectMapper.Map<ExamChoiceQuestion>(input);
+           
+        //    if((Array.Find(changeNum,x=>x==examquestion.TrueAnswerIndex)).Equals((char)0))
+        //    { examquestion.TrueAnswerIndex = 'A'; }
+
+        //    //await _examquestionRepository.InsertAsync(examquestion);
+
+        //    return MapToEntityDto(examquestion);
+        //}
+
+      
     }
 }

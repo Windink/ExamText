@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExamSystem.WebApi;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,11 @@ namespace ExamSystem.Pages
     /// </summary>
     public partial class ExamineeExamPape : Page
     {
-        public ExamineeExamPape()
+        private readonly Token token;
+        public ExamineeExamPape(Token token)
         {
             InitializeComponent();
+            this.token = token;
         }
 
 

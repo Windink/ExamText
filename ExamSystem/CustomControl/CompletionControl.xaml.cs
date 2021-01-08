@@ -21,12 +21,12 @@ namespace ExamSystem.CustomControl
         //分别为上划线（Overline)，中划线(StrikeThrough)，基线(Baseline)，下划线(Underline)。
 
         private string Question;
-        private List<TextBlock> textBlocks;
+        private List<TextBox> textBoxs;
 
         public CompletionControl(int index,string Question)
         {
             InitializeComponent();
-            textBlocks = new List<TextBlock>();
+            textBoxs = new List<TextBox>();
             questionindex.Content = index.ToString();
             this.Question = Question;
             Initialize(Question);
@@ -46,7 +46,7 @@ namespace ExamSystem.CustomControl
             else
             {
                 CreateLabel(infor.Substring(0, num));
-                CreateTextBlock("  ");
+                CreateTextBlock();
                 infor = infor.Substring(num + 2, infor.Length - num - 2);
                 Initialize(infor);
             }
@@ -59,7 +59,7 @@ namespace ExamSystem.CustomControl
         /// <returns></returns>
         public string GetAnswer()
         {
-            return textBlocks.ToString();
+            return textBoxs.ToString();
         }
 
         private void CreateLabel(string infor)
@@ -71,14 +71,16 @@ namespace ExamSystem.CustomControl
             Completions.Children.Add(label);
         }
 
-        private void CreateTextBlock(string infor)
+        private void CreateTextBlock()
         {
-            TextBlock textBlock = new TextBlock();
-            textBlock.Text = infor;
-            textBlock.FontSize = 15;
-            textBlock.TextDecorations = TextDecorations.Underline;
-            Completions.Children.Add(textBlock);
-            textBlocks.Add(textBlock);
+            TextBox textBox = new TextBox();
+            textBox.VerticalAlignment = VerticalAlignment.Center;
+            textBox.Text = "";
+            textBox.Width = 30;
+            textBox.FontSize = 15;
+            textBox.BorderThickness = new Thickness(0, 0, 0, 1);
+            Completions.Children.Add(textBox);
+            textBoxs.Add(textBox);
         }
     }
 }

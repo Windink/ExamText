@@ -104,7 +104,9 @@ namespace ExamSystem.Pages.ExamPage
 
         private void Preview_Click(object sender, RoutedEventArgs e)
         {
-            
+            Frame frame = new Frame();
+            frame.Content = new ExamPreview(token, testpapers[0]);
+            this.Content = frame;
         }
     }
 }

@@ -1612,6 +1612,40 @@ namespace ExamText.Migrations
                     b.ToTable("ExamShortAnswerQuestion");
                 });
 
+            modelBuilder.Entity("ExamText.ExamTestAnswers.ExamTestAnswer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ChoiceAnswers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CompletionAnswers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ExamTestPaperId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ShortAnswers")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long>("UserId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("branch")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExamTestPaperId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ExamTestAnswers");
+                });
+
             modelBuilder.Entity("ExamText.ExamTestPapers.ExamTestPaper", b =>
                 {
                     b.Property<int>("Id")
@@ -1947,6 +1981,21 @@ namespace ExamText.Migrations
                     b.HasOne("ExamText.ExamTestPapers.ExamTestPaper", null)
                         .WithMany("ExamShortAnswerQuestions")
                         .HasForeignKey("ExamTestPaperId");
+                });
+
+            modelBuilder.Entity("ExamText.ExamTestAnswers.ExamTestAnswer", b =>
+                {
+                    b.HasOne("ExamText.ExamTestPapers.ExamTestPaper", "examTestPaper")
+                        .WithMany()
+                        .HasForeignKey("ExamTestPaperId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ExamText.Authorization.Users.User", "user")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("ExamText.Examinees.Examinee", b =>

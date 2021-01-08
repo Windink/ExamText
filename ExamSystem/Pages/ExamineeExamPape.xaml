@@ -13,9 +13,9 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn  Header="试卷名称" Width="100" DisplayMemberBinding="{Binding Name}" ></GridViewColumn>
-                    <GridViewColumn  Header="选择题目数量" Width="100" DisplayMemberBinding="{Binding ChoiceName}"></GridViewColumn>
-                    <GridViewColumn  Header="填空题题目数量" Width="100" DisplayMemberBinding="{Binding ComletionName}"></GridViewColumn>
-                    <GridViewColumn  Header="问答题目数量" Width="100" DisplayMemberBinding="{Binding SAQName}"></GridViewColumn>
+                    <GridViewColumn  Header="选择题目数量" Width="100" DisplayMemberBinding="{Binding ChoiceNameCount}"></GridViewColumn>
+                    <GridViewColumn  Header="填空题题目数量" Width="100" DisplayMemberBinding="{Binding ComletionNameCount}"></GridViewColumn>
+                    <GridViewColumn  Header="问答题目数量" Width="100" DisplayMemberBinding="{Binding SAQNameCount}"></GridViewColumn>
                     <GridViewColumn Header=" " Width="60">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>

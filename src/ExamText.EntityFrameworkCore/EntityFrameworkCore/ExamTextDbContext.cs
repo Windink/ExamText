@@ -8,6 +8,7 @@ using ExamText.ExamCompletions;
 using ExamText.ExamShortAnswerQuestions;
 using ExamText.ExamTestPapers;
 using ExamText.ExamChoiceQuestions;
+using ExamText.ExamTestAnswers;
 
 namespace ExamText.EntityFrameworkCore
 {
@@ -18,11 +19,13 @@ namespace ExamText.EntityFrameworkCore
 
         public virtual DbSet<ExamCompletion> ExCompletions { get; set; }
 
-        public virtual DbSet<ExamChoiceQuestion> ExamQuestions { get; set; }
+        public virtual DbSet<ExamChoiceQuestion> ExamChoiceQuestion { get; set; }
 
         public virtual DbSet<ExamShortAnswerQuestion> ExamShortAnswerQuestions { get; set; }
 
         public virtual DbSet<ExamTestPaper> ExamTestPapers { get; set; }
+
+        public virtual DbSet<ExamTestAnswer> ExamTestAnswers { get; set; }
 
         public ExamTextDbContext(DbContextOptions<ExamTextDbContext> options)
             : base(options)

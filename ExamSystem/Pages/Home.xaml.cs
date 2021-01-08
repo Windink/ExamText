@@ -26,7 +26,7 @@ namespace ExamSystem.Pages
     {
         private Token login_token;
         private UserServer userRequest;
-        private List<JToken> users;
+       // private List<JToken> users;
 
         public Home(Token token)
         {
@@ -77,27 +77,34 @@ namespace ExamSystem.Pages
                 }
             }
             CloseTabControl tabItem = new CloseTabControl();
+            ScrollViewer scrollViewer = new ScrollViewer();
+            scrollViewer.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
+            tabItem.Content = scrollViewer; ;
             tabItem.Title = liteName;
             tabItem.Name = liteName;
             Frame frame = new Frame();
-            if(liteName.Equals("用户"))
+            if (liteName.Equals("用户"))
             {
                 frame.Content = new Users(login_token);
             }
-            else if(liteName.Equals("角色"))
+            else if (liteName.Equals("角色"))
             {
                 frame.Content = new Roles(login_token);
             }
-            else if(liteName.Equals("考试管理"))
+            else if (liteName.Equals("考试管理"))
             {
                 frame.Content = new ExamPaper(login_token);
+            }
+            else if (liteName.Equals("考试"))
+            {
+                frame.Content = new ExamineeExamPape(login_token);
             }
             else
             {
                 MessageBox.Show(liteName);
                 return;
             }
-            tabItem.Content = frame;
+            scrollViewer.Content = frame;
             tabControl.Items.Add(tabItem);
             tabItem.IsSelected = true;
         }

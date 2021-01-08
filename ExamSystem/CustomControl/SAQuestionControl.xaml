@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
         <StackPanel Orientation="Horizontal">
             <Label Content="1"  FontSize="15" Name="QuestionIndex"/>
                 <Label Content="题目" FontSize="15" Height="50" Name="Questioncontent"/>
         </StackPanel>
-          <TextBox Height="100" Name="Answers" TextWrapping="Wrap"/>  
+          <TextBox Height="100" Name="Answers" TextWrapping="Wrap" Width="800"/>  
         </StackPanel>
     </Grid>
 </UserControl>

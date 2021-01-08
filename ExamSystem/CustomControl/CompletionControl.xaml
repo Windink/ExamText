@@ -4,10 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExamSystem.CustomControl"
-             mc:Ignorable="d" Height="76" Width="757">
+             mc:Ignorable="d" Height="76" Width="800">
     <Grid>
-        <StackPanel Orientation="Horizontal" Name="Completions">
-            <Label Content="1" VerticalAlignment="Center" Name="questionindex"></Label>
+        <StackPanel Orientation="Horizontal" Name="Completions" HorizontalAlignment="Left">
+            <Label FontSize="15" Content="1" VerticalAlignment="Center" Name="questionindex"></Label>
         </StackPanel>
     </Grid>
 </UserControl>
