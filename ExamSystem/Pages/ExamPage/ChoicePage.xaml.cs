@@ -48,7 +48,7 @@ namespace ExamSystem.Pages.ExamPage
             }
         }
 
-        public void GoBack()
+        private void GoBack()
         {
             Frame frame = new Frame();
             frame.Content = new PreViewPage();

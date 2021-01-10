@@ -67,7 +67,7 @@ namespace ExamSystem.CustomControl
         /// 返回答案
         /// </summary>
         /// <returns></returns>
-        private Dictionary<string,string> GetChoiceinformation()
+        public Dictionary<string,string> GetChoiceinformation()
         {
             if(ChoiceChar.Equals(""))
             {

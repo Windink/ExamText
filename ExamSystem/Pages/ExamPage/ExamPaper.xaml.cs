@@ -104,8 +104,13 @@ namespace ExamSystem.Pages.ExamPage
 
         private void Preview_Click(object sender, RoutedEventArgs e)
         {
+            Button button = sender as Button;
             Frame frame = new Frame();
-            frame.Content = new ExamPreview(token, testpapers[0]);
+            foreach (var item in testpapers)
+            {
+                if (item["id"].Equals(button.Tag))
+                    frame.Content = new ExamPreview(token, item);
+            }
             this.Content = frame;
         }
     }

@@ -45,17 +45,21 @@ namespace ExamSystem.Pages
             //    item.
             //} 
             string uri = Uris.BaseUrl + Uris.User + "Get";
-            var result =await userRequest.GetUserRokes(uri, new entity<long>() { id = int.Parse(login_token.login_Id) });
+            var result =await userRequest.GetUserRokes(uri, new entity<long>() { id = long.Parse(login_token.login_Id) });
+          
             foreach(var item in result)
-            {
-                if(item.Equals("ADMIN"))
+            {  
+               // MessageBox.Show(item);
+                if(item.ToUpper().Equals("ADMIN"))
                 {
+                    listitemsbox.Items.Remove(exam);
                     return;
                 }
-                else if(item.Equals("EXAMINEES"))
+                else if(item.ToUpper().Equals("EXAMINEES"))
                 {
                     listitemsbox.Items.Remove(userItem);
                     listitemsbox.Items.Remove(roleItem);
+                    listitemsbox.Items.Remove(examItem);
                     return;
                 }  
             }
@@ -109,5 +113,9 @@ namespace ExamSystem.Pages
             tabItem.IsSelected = true;
         }
 
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.Content = new Login();
+        }
     }
 }

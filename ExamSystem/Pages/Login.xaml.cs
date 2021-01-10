@@ -9,6 +9,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -36,7 +38,7 @@ namespace ExamSystem
         private Token login_token; // 登录Token
         private VideoCapture videoCapture;
         private Mat mat;
-
+        private string name;
         public Login()
         {
             InitializeComponent();
@@ -56,10 +58,10 @@ namespace ExamSystem
             // }    
             login_token = new Token();
             user us = new user();
-            //us.UsernameOrEmailAddress = UserID.Text;
-            //us.Password = UserPassword.Password;
-            us.UsernameOrEmailAddress = "admin";
-            us.Password = "123qwe";
+            us.UsernameOrEmailAddress = UserID.Text;
+            us.Password = UserPassword.Password;
+            //us.UsernameOrEmailAddress = "admin";
+            //us.Password = "123qwe";
             try
             {
                 string re = await login_token.GetToken(us);
@@ -68,7 +70,15 @@ namespace ExamSystem
                     MessageBox.Show(re);
                 else
                 {
-                    Application.Current.MainWindow.Content = new Home(login_token);
+                    if((bool)AdminRadio.IsChecked)
+                    {
+                        Application.Current.MainWindow.Content = new Home(login_token);
+                    }
+                    else if((bool)ExamineeRadio.IsChecked)
+                    {
+                        this.name = UserID.Text;
+                        Creat_Face();
+                    }
                     //MessageBox.Show("登录成功"); 
                     //Text();
                 }
@@ -79,6 +89,8 @@ namespace ExamSystem
             }
         }
 
+
+
         /// <summary>
         /// 注册事件
         /// </summary>
@@ -88,13 +100,47 @@ namespace ExamSystem
         {
             Application.Current.MainWindow.Content = new Register();
         }
-
+        private const string path = "D:\\Windink Pro\\5.8.1\\aspnet-core\\facesystem\\Predict_class.py";//py文件路径
+        private Process progressTest;
         /// <summary>
         /// 人脸识别认证登录
         /// </summary>
-        public void FaceDiscen()
+        private void FaceDiscen(Mat mat)
         {
+            if (!File.Exists(path))
+            {
+                //MessageBox.Show("The file was not found.");
+                return;
+            }
+            string sArguments = path;
+            sArguments += " " + mat.ToString()+ " " + this.name +" ";
+            ProcessStartInfo start = new ProcessStartInfo();
+            start.FileName = @"E:\\Users\\LEGION\\anaconda3\\envs\\new_gpu\\python.exe";
+            start.Arguments = sArguments;
+            start.UseShellExecute = false;
+            start.RedirectStandardOutput = true;
+            start.RedirectStandardInput = true;
+            start.RedirectStandardError = true;
+            start.CreateNoWindow = true;
+            using (progressTest = Process.Start(start))
+            {
+                // 异步获取命令行内容
+                progressTest.BeginOutputReadLine();
+                // 为异步获取订阅事件
+                progressTest.OutputDataReceived += new DataReceivedEventHandler(outputDataReceived);
+            }
+        }
 
+        public void outputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(e.Data)&&e.Data.Equals("true"))
+            {
+                Application.Current.MainWindow.Content = new Home(login_token);
+            }
+            else
+            {
+                MessageBox.Show("识别失败");
+            }
         }
 
         /// <summary>
@@ -174,7 +220,9 @@ namespace ExamSystem
             {
                 System.Drawing.Rectangle rectangle = new System.Drawing.Rectangle(faceRect.X - 20, faceRect.Y - 20,
                     faceRect.X + faceRect.Width + 20, faceRect.Y + faceRect.Height + 20);
+                FaceDiscen(mat);
                 CvInvoke.Rectangle(mat, rectangle, mCvScalar, 2);
+
             }
 
 

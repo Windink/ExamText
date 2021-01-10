@@ -1,6 +1,9 @@
 ﻿using ExamSystem.WebApi;
+using ExamSystem.WebApi.Server;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -19,19 +22,57 @@ namespace ExamSystem.Pages
     /// </summary>
     public partial class ExamineeExamPape : Page
     {
-        private readonly Token token;
+        private readonly TestpaperServer testpaperServer;
+        private Token token;
+        private List<JToken> testpapers;
+
+
+
         public ExamineeExamPape(Token token)
         {
             InitializeComponent();
             this.token = token;
+            testpaperServer = new TestpaperServer(token.login_Token);
+            Initialize();
         }
-
+        private async void Initialize()
+        {
+            listView.Items.Clear();
+            // if (testpapers == null)
+            //{ 
+            this.testpapers = await testpaperServer.GetAllRequest(Uris.BaseUrl + Uris.TestPage + "GetAll");
+            //d}
+            foreach (var item in this.testpapers)
+            {
+                if (!(bool)item["isActive"])
+                {
+                    continue;
+                }
+                var it = new
+                {
+                    Name = item["examTestPaperName"],
+                    ChoiceNameCount = item["examQuestionIDs"].ToString().Split(',').Length,
+                    ComletionNameCount = item["examCompletionIDs"].ToString().Split(',').Length,
+                    SAQNameCount = item["examShortAnswerQuestionIDs"].ToString().Split(',').Length,
+                    ID = item["id"]
+                };
+                listView.Items.Add(it);
+            }
+            listView.Items.SortDescriptions.Add(new SortDescription("ID", ListSortDirection.Ascending));
+        }
 
 
 
         private void Exam_Click(object sender, RoutedEventArgs e)
         {
-            
+            Button button = sender as Button;
+            Frame frame = new Frame();
+            foreach (var item in testpapers)
+            { 
+                if(item["id"].Equals(button.Tag))
+            frame.Content = new Examine(token, item);
+            }
+            this.Content = frame;
         }
     }
 }
