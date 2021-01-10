@@ -19,6 +19,8 @@
             <TextBox Name="UserID" Width="200" Height="30" VerticalAlignment="Top"/>
             <Label Content="密码：" HorizontalAlignment="Right" />
             <PasswordBox Name="UserPassword" Width="200" Height="30" VerticalAlignment="Top"/>
+            <RadioButton HorizontalAlignment="Right" Name="ExamineeRadio">考生</RadioButton>
+            <RadioButton HorizontalAlignment="Left" Name="AdminRadio">管理员</RadioButton>
             <Button Content="登录" Width="50"  Click="Button_Click" HorizontalAlignment="Right" Margin="0,10,0,10"/>
             <Button Content="注册" Width="50" Click="Button_Click_1" HorizontalAlignment="Left" Margin="10"/>
         </UniformGrid>

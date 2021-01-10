@@ -26,6 +26,7 @@ namespace ExamText.Authorization
             users.CreateChildPermission(PermissionNames.Pages_Users_ChangePassword, L("ChangeUserPassword"));
             users.CreateChildPermission(PermissionNames.Pages_Users_Get, L("GetUser"));
 
+            var test = pages.CreateChildPermission(PermissionNames.Pages_Test_Answer, L("TestAnswer"));
         }
 
         private static ILocalizableString L(string name)

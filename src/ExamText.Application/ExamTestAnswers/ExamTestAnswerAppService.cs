@@ -9,7 +9,7 @@ using ExamText.ExamTestAnswers.Dto;
 
 namespace ExamText.ExamTestAnswers
 {
-    [AbpAuthorize(PermissionNames.Pages_Exam_Questions)]
+    [AbpAuthorize(PermissionNames.Pages_Test_Answer)]
     public class ExamTestAnswerAppService : AsyncCrudAppService<ExamTestAnswer, ExamTestAnswerDto, int, PageExamTestAnswerResultReques, CreateExamTestAnswerDto, ExamTestAnswerDto>,IExamTestAnswerAppService
     {
         private readonly IRepository<ExamTestAnswer> _examtestrepository;

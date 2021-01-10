@@ -27,5 +27,6 @@ namespace ExamSystem.WebApi
 
         public const string TestPage = "/api/services/app/ExamTestPaper/";//试卷
 
+        public const string TestAnswer = "/api/services/app/ExamTestAnswer/";
     }
 }

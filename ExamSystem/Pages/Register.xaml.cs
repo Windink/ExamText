@@ -37,24 +37,24 @@ namespace ExamSystem
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            using(var client =new HttpClient())
-            {
-                //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("Application/json"));
+            //using(var client =new HttpClient())
+            //{
+            //    //client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("Application/json"));
 
-                var uri = baseUrl + "/api/services/app/User/Create";
+            //    var uri = baseUrl + "/api/services/app/User/Create";
 
-                CreateUser createUser = new CreateUser();
+            //    CreateUser createUser = new CreateUser();
 
-                var js = JsonConvert.SerializeObject(createUser);              
+            //    var js = JsonConvert.SerializeObject(createUser);              
 
-                MessageBox.Show(js);
+            //    MessageBox.Show(js);
 
-                var input = new StringContent(js);
-                input.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json") { CharSet="utf-8"};
-                var result =await client.PostAsync(uri,input);
+            //    var input = new StringContent(js);
+            //    input.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("Application/json") { CharSet="utf-8"};
+            //    var result =await client.PostAsync(uri,input);
 
-                MessageBox.Show(result.ToString());
-            }
+            //    MessageBox.Show(result.ToString());
+            //}
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

@@ -22,7 +22,7 @@
 
         public const string Pages_Roles_Get = "Pages.Roles.Get";
 
-
+        public const string Pages_Test_Answer = "Pages.Test.Answer";
 
         public const string Pages_Examinees = "Pages.Examinees";
 

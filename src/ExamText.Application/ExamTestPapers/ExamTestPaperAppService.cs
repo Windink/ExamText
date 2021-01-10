@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace ExamText.ExamTestPapers
 {
-    [AbpAuthorize(PermissionNames.Pages_Exam_Questions)]
+    [AbpAuthorize(PermissionNames.Pages_Test_Answer)]
     public class ExamTestPaperAppService : AsyncCrudAppService<ExamTestPaper,ExamTestPaperDto, int, PageExamTestPaperResultRequestDto, CreateExamTestPaperDto, UpdateTestPaperDto>, IExamTestPaperAppService
     {
         private readonly IRepository<ExamTestPaper> _examtestrepository;

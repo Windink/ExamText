@@ -105,7 +105,7 @@ namespace ExamSystem.Pages
 
                 var re = await UploadImage();
 
-                if (re["success"].Equals("flase"))
+                if (re!=null&&!(bool)re["success"])
                 { MessageBox.Show(re["error"]["message"].ToString()); }
                 else
                 {
@@ -121,6 +121,10 @@ namespace ExamSystem.Pages
 
         private async Task<JToken> UploadImage()
         { 
+            if(imagePath==null)
+            {
+                return null;
+            }
             Bitmap bitmap = new Bitmap(imagePath);
             string picture = ImagetoBase64(bitmap);
 
